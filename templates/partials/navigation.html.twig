@@ -1,0 +1,46 @@
+{#
+* Jotter is a Grav CMS theme | https://github.com/underr-ua/grav-theme-jotter
+* Copyright 2017-2019 Andrii Burkatskyi aka underr
+* Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
+#}
+
+
+{% set dropdown = theme_config.navbar.dropdown %}
+{% set icon = theme_config.navbar.icon %}
+
+<nav id="main_nav" class="go-nav nav-expand-md {{ classes }}" data-class="nav-open">
+    <a class="nav-toggle" data-id="main_nav"  href="javascript:void(0);">
+        <i class="i-menu" data-icon="i-cancel" aria-hidden="true"></i>
+    </a>
+    <div class="nav-header">
+        {% set navbar_brand %}
+            <span class="ml-1" id="brand-text">
+                <i aria-hidden="true" class="i-globe"></i>
+                {{ config.site.title|upper }}
+            </span>
+        {% endset %}
+
+        {% if page.url == '' or page.url == '/' %}
+            {{ navbar_brand }}
+        {% else %}
+            <a href="{{ base_url == '' ? '/' : base_url }}">{{ navbar_brand }}</a>
+        {% endif %}
+    </div>
+    <div class="nav-list">
+        {% for page in pages.children.visible %}
+            {% set page_menu %}
+                {% if page.header.icon %}
+                    <i class="{{ page.header.icon }}"></i>
+                {% endif %}
+
+                {{ page.menu }}
+            {% endset %}
+
+            {% if not page.active %}
+                <a class="nav-item" href="{{ page.url }}">{{ page_menu }}</a>
+            {% else %}
+                <span class="nav-item active" style="{{ active_color }}">{{ page_menu }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+</nav>

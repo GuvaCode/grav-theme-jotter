@@ -1,0 +1,13 @@
+{#
+* Jotter is a Grav CMS theme | https://github.com/underr-ua/grav-theme-jotter
+* Copyright 2017-2019 Andrii Burkatskyi aka underr
+* Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
+#}
+
+{% if page.header.taxonomy.tag %}
+    <i class="i-tags"></i>
+    {% for tag in page.header.taxonomy.tag %}
+        <a href="{{ base_url }}/tag:{{ tag|url_encode }}" class="go-tag border-bottom border-b-0"
+                itemprop="keywords" rel="tag">{{ tag }}</a>
+    {% endfor %}
+{% endif %}

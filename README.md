@@ -19,6 +19,7 @@ A simple responsive theme for Grav CMS.
   * [JSComments](https://github.com/Sommerregen/grav-plugin-jscomments)
   * [Page-TOC](https://github.com/trilbymedia/grav-plugin-page-toc)
   * [Pagination](https://github.com/getgrav/grav-plugin-pagination)
+  * [reCAPTCHA Contact](https://github.com/aradianoff/recaptchacontact)
   * [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch)
   * [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist)
 

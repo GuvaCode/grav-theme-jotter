@@ -1,0 +1,38 @@
+{#
+* Jotter is a Grav CMS theme | https://github.com/underr-ua/grav-theme-jotter
+* Copyright 2017-2019 Andrii Burkatskyi aka underr
+* Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
+#}
+
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+{% if config.plugins.breadcrumbs.enabled and page.url != "/" %}
+    {% include 'partials/breadcrumbs.html.twig' %}
+{% endif %}
+
+<div class="go-grid">
+    <div class="{{ theme_config.sidebar.enabled ? "go-unit unit-8 unit-12-md" : "go-unit unit-auto mx-auto" }}">
+        <main>
+            {% for p in page.collection %}
+                {% include 'partials/preview.html.twig' with {
+                    'page' : p
+                } %}
+            {% endfor %}
+        </main>
+        {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {
+                'base_url' : page.url,
+                'pagination' : page.collection.params.pagination
+            } %}
+        {% endif %}
+    </div>
+    {% if theme_config.sidebar.enabled %}
+        <div class="go-unit unit-4 unit-12-md">
+            {% include 'partials/sidebar.html.twig' %}
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{#
+* Jotter is a Grav CMS theme | https://github.com/underr-ua/grav-theme-jotter
+* Copyright 2017-2019 Andrii Burkatskyi aka underr
+* Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
+#}
+
+<meta content="{{ base_url_absolute ~ banner_url|default('/')}} " itemprop="image"/>
+<link href="{{ base_url_absolute ~ page_url }}" itemType="https://schema.org/WebPage" itemprop="mainEntityOfPage" itemscope="itemscope"/>
+<span itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
+    <meta content="{{ base_url_absolute }}" itemprop="name"/></span>
+<span itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization">
+    <meta content="{{ base_url_absolute }}" itemprop="url"/>
+    <meta content="{{ config.site.title }}" itemprop="name"/>
+    <span itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+        <meta content="{{ base_url_absolute ~ banner_url|default('/') }}" itemprop="url"/>
+    </span>
+</span>
