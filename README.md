@@ -10,7 +10,7 @@ A simple responsive theme for Grav CMS.
 * Cross-browser compatible responsive design (html5, css3, flexbox).
 * Customizable blueprints
 * Multi-topic blog
-* Google Fonts - [Montserrat()]https://fonts.google.com/specimen/Montserrat)
+* Google Fonts - [Montserrat](https://fonts.google.com/specimen/Montserrat)
 * Customized iconset by [Fontello](http://fontello.com/)
 * Support next Grav CMS plugins:
   * [Archives](https://github.com/getgrav/grav-plugin-archives)
