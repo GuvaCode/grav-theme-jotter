@@ -20,12 +20,12 @@
         {% if bg %}background-color:{{ bg }};{% endif %}">
         <h1 class="hero-title j-t-shadow">
             {% if page.home %}
-                {{ page.header.hero.title|default(site.title)|upper }}
+                {{ site.title|e }}
             {% else %}
-                {{ page.header.hero.title|default(page.title)|upper }}
+                {{ page.header.hero.title|default(page.title)|e }}
             {% endif %}
             {% if page.header.hero.subtitle %}
-                <span class="hero-subtitle t-nm t-italic"> - {{ page.header.hero.subtitle }} -</span>
+                <span class="hero-subtitle t-nm t-italic"> - {{ page.header.hero.subtitle|e }} -</span>
             {% endif %}
         </h1>
     </div>
