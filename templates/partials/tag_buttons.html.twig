@@ -8,7 +8,6 @@
     <i class="i-tags"></i>
     {% for tag in page.header.taxonomy.tag %}
         <a href="{{ base_url }}/tag:{{ tag|url_encode }}" class="go-tag"
-                itemprop="keywords" rel="tag">{{ tag }}</a>
-        {% if not loop.last %},{% endif %}
+                itemprop="keywords" rel="tag">{{ tag }}{% if not loop.last %}<span>,</span>{% endif %}</a>
     {% endfor %}
 {% endif %}
