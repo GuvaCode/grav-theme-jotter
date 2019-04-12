@@ -20,7 +20,7 @@
         {% if bg %}background-color:{{ bg }};{% endif %}">
         <h1 class="hero-title j-t-shadow">
             {% if page.home %}
-                {{ site.title|e }}
+                {{ site.title|default(page.title)|ee }}
             {% else %}
                 {{ page.header.hero.title|default(page.title)|e }}
             {% endif %}
