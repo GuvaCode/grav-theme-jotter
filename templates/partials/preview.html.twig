@@ -22,12 +22,12 @@
     <div class="card-meta align-left">
         <div class="go-grid">
             <div class="go-unit unit-auto unit-12-sm">
-                <i class="i-calendar" class="font-sm"></i>
+                <i class="i-calendar font-sm"></i>
                 {% include 'partials/date.html.twig' with { 'date': page.header.date|date('Y-m-d') } %}
                 <span class="hide-sm"> | </span>
             </div>
             <div class="go-unit unit-auto unit-12-sm">
-                <i class="i-folder" class="font-sm"></i><a href="{{ page.parent.url }}">{{ page.parent.title }}</a>
+                <i class="i-folder font-sm"</i><a href="{{ page.parent.url }}">{{ page.parent.title }}</a>
                 <span class="hide-sm"> | </span>
             </div>
             <div class="go-unit unit-auto unit-12-sm">
@@ -50,7 +50,7 @@
 
     <div class="card-footer justify-between">
         <div class="card-meta">
-            <i class="i-eye" class="font-sm"></i>{{ viewcounts[page.route]|default(0)}}
+            <i class="i-eye font-sm"></i>{{ viewcounts[page.route]|default(0)}}
         </div>
         <div>
             {% include 'partials/share_buttons.html.twig'%}
