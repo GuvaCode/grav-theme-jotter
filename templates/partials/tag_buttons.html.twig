@@ -7,7 +7,7 @@
 {% if page.header.taxonomy.tag %}
     <i class="i-tags"></i>
     {% for tag in page.header.taxonomy.tag %}
-        <a href="{{ base_url }}/tag:{{ tag|url_encode }}" class="go-tag border-bottom border-b-0"
+        <a href="{{ base_url }}/tag:{{ tag|url_encode }}" class="go-tag"
                 itemprop="keywords" rel="tag">{{ tag }}</a>
     {% endfor %}
 {% endif %}
