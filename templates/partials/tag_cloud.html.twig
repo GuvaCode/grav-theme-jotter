@@ -10,12 +10,14 @@
     {% if filter %}
         {% for tax, value in taxlist[tax_type]|slice(filterstart, filterend) %}
             <a href="{{ base_url }}/{{ tax_type }}{{ config.system.param_sep }}{{ tax|e('url') }}"
-                class="go-tag t-xs border-bottom border-b-0" rel="nofollow">{{tax}}</a>
+                class="go-tag t-sm"
+                rel="nofollow">{{tax}}</a>{% if not loop.last %},{% endif %}
         {% endfor %}
     {% else %}
         {% for tax, value in taxlist[tax_type]|ksort %}
             <a href="{{ base_url }}/{{ tax_type }}{{ config.system.param_sep }}{{ tax|e('url') }}"
-                    class="go-tag t-xs border-bottom border-b-0"rel="nofollow">{{ tax }}</a>
+                    class="go-tag t-sm"
+                    rel="nofollow">{{ tax }}</a>{% if not loop.last %},{% endif %}
         {% endfor %}
     {% endif %}
 
