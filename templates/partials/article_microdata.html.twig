@@ -5,9 +5,11 @@
 #}
 
 <meta content="{{ base_url_absolute ~ banner_url|default('/')}} " itemprop="image"/>
-<link href="{{ base_url_absolute ~ page_url }}" itemType="https://schema.org/WebPage" itemprop="mainEntityOfPage" itemscope="itemscope"/>
+<link href="{{ base_url_absolute ~ page_url }}" itemType="https://schema.org/WebPage"
+    itemprop="mainEntityOfPage" itemscope="itemscope"/>
 <span itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
-    <meta content="{{ base_url_absolute }}" itemprop="name"/></span>
+    <meta content="{{ base_url_absolute }}" itemprop="name"/>
+</span>
 <span itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization">
     <meta content="{{ base_url_absolute }}" itemprop="url"/>
     <meta content="{{ config.site.title }}" itemprop="name"/>
