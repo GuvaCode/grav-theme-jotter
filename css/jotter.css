@@ -100,11 +100,6 @@ html {
     color: var(--c-m-1);
 }
 
-.go-article .article-meta,
-.go-card .card-meta {
-    color: var(--c-m-0);
-}
-
 .go-card {
     background-color: #fffff4;
     margin: 10px;
