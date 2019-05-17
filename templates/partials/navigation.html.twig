@@ -13,30 +13,12 @@
         <i class="i-menu" data-icon="i-cancel" aria-hidden="true"></i>
     </a>
     <div class="nav-header">
-        {% set navbar_brand %}
+        <a href="{{ base_url == '' ? '/' : base_url }}">
             <span class="ml-1" id="brand-text">
                 <i aria-hidden="true" class="i-globe"></i>
                 {{ config.site.title|upper }}
             </span>
-        {% endset %}
-
-        <script type="text/javascript">
-    <!--
-    // detection of old browsers that does not support flexbox technology
-    var base = '{{ base_url }}';
-    var page = '{{ page.url }}';
-
-    console.log(base);
-    console.log(page);
-
-    //-->
-</script>
-        {# {% if page.url == '' or page.url == '/' %} #}
-        {% if page.home %}
-            {{ navbar_brand }}
-        {% else %}
-            <a href="{{ base_url == '' ? '/' : base_url }}">{{ navbar_brand }}</a>
-        {% endif %}
+        </a>
     </div>
     <div class="nav-list">
         {% for page in pages.children.visible %}
