@@ -30,11 +30,11 @@
                 {{ page.menu }}
             {% endset %}
 
-            {% if not page.active %}
+            {# {% if not page.active %} #}
                 <a class="nav-item" href="{{ page.url }}">{{ page_menu }}</a>
-            {% else %}
+            {# {% else %}
                 <span class="nav-item active" style="{{ active_color }}">{{ page_menu }}</span>
-            {% endif %}
+            {% endif %} #}
         {% endfor %}
     </div>
 </nav>
