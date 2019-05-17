@@ -31,7 +31,8 @@
 
     //-->
 </script>
-        {% if page.url == '' or page.url == '/' %}
+        {# {% if page.url == '' or page.url == '/' %} #}
+        {% if page.home %}
             {{ navbar_brand }}
         {% else %}
             <a href="{{ base_url == '' ? '/' : base_url }}">{{ navbar_brand }}</a>
