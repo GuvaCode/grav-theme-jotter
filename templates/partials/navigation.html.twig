@@ -20,6 +20,17 @@
             </span>
         {% endset %}
 
+        <script type="text/javascript">
+    <!--
+    // detection of old browsers that does not support flexbox technology
+    var base = '{{ base_url }}';
+    var page = '{{ page.url }}';
+
+    console.log(base);
+    console.log(page);
+
+    //-->
+</script>
         {% if page.url == '' or page.url == '/' %}
             {{ navbar_brand }}
         {% else %}
