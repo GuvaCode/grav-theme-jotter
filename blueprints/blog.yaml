@@ -21,6 +21,8 @@ form:
           fields:
             publishing:
               unset@: true
+              metadata:
+                unset@: false
             taxonomies:
               unset@: true
             description:
