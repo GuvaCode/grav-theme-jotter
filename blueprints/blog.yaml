@@ -21,11 +21,11 @@ form:
           fields:
             publishing:
               # unset@: true
-              header:
-                date:
+              fields:
+                header.date:
                   unset@: true
-              header.metadata:
-                unset@: false
+              # header.metadata:
+              #   unset@: false
             taxonomies:
               unset@: true
             description:
