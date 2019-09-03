@@ -30,8 +30,6 @@ form:
                   unset@: true
                 header.unpublish_date:
                   unset@: true
-                header.metadata:
-                  unset@: false
             taxonomies:
               unset@: true
             description:
