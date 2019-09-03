@@ -21,8 +21,9 @@ form:
           fields:
             publishing:
               # unset@: true
-              header.date:
-                unset@: true
+              header:
+                date:
+                  unset@: true
               header.metadata:
                 unset@: false
             taxonomies:
