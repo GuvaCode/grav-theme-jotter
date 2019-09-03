@@ -20,11 +20,7 @@ form:
         options:
           fields:
             publishing:
-              # unset@: true
-              header.date:
-                unset@: true
-              header.metadata:
-                unset@: false
+              unset@: true
             taxonomies:
               unset@: true
             description:
