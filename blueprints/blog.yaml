@@ -22,10 +22,16 @@ form:
             publishing:
               # unset@: true
               fields:
+                header.published:
+                  unset@: false
                 header.date:
                   unset@: true
-              # header.metadata:
-              #   unset@: false
+                header.publish_date:
+                  unset@: true
+                header.unpublish_date:
+                  unset@: true
+                header.metadata:
+                  unset@: false
             taxonomies:
               unset@: true
             description:
