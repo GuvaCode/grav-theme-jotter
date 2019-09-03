@@ -22,8 +22,6 @@ form:
             publishing:
               # unset@: true
               fields:
-                header.published:
-                  unset@: false
                 header.date:
                   unset@: true
                 header.publish_date:
