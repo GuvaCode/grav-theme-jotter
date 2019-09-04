@@ -20,7 +20,7 @@
                 {% set i = -1 %}
 
                 <span class="breadcrumb-item">
-                    <a href="{{ base_url_absolute ~ crumb.url }}">
+                    <a href="{{ crumb.url }}">
                         <span>
                             {% if breadcrumbs_config.icon_home %}
                                 <i class="i-home"></i>
@@ -35,7 +35,7 @@
                     itemtype="https://schema.org/ListItem">
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ base_url_absolute ~ crumb.url }}" itemid="{{ base_url_absolute ~ crumb.url }}"
+                            <a href="{{ crumb.url }}" itemid="{{ base_url_absolute ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
@@ -46,7 +46,7 @@
                         <meta content="{{ loop.index + i }}" itemprop="position">
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
-                            <a href="{{ base_url_absolute ~ crumb.url }}"
+                            <a href="{{ crumb.url }}"
                                 itemid="{{ base_url_absolute ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
