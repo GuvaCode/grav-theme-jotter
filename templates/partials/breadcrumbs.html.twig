@@ -38,7 +38,7 @@
                     {# Then base_url, base_url_relative, base_url_absolute and breadcrumbs.get().url contain the subdirectory path #}
                     {% if base_url is same as base_url_absolute %}
                         {% set crumb_full_url = crumb.url %}
-                    {% else if base_url_relative in base_url_absolute %}
+                    {% elseif base_url_relative in base_url_absolute %}
                         {% set crumb_full_url = base_url_absolute|replace({ (base_url_relative) : ''}) ~ crumb.url %}
                     {% else %}
                         {% set crumb_full_url = base_url_absolute ~ crumb.url %}
