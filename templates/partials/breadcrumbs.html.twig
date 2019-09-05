@@ -11,9 +11,11 @@
     <nav class="go-breadcrumb"
         itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
-
+{% for crumb in crumbs %}
+            {{ url('crumb.url') }} 
+{% endfor %}
         {% for crumb in crumbs %}
-            {{ absolute_url('crumb.url') }} 
+            {{ url('crumb.url') }} 
             {% set crumb_name %}
                 <span itemprop="name">{{ crumb.menu }}</span>
             {% endset %}
