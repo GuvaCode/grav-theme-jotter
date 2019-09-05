@@ -10,7 +10,7 @@
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
     <nav class="go-breadcrumb"
         data-a="{{base_url}} "
-        data-b="{{base_url_absolute}} "
+        data-b="{{base_url_relative}} "
         data-c="{{base_url_relative}} "
         itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
@@ -39,8 +39,8 @@
                     itemtype="https://schema.org/ListItem">
 
                     {# When grav installed in subdirectory base_url, base_url_absolute and breadcrumbs.get().url contain this subdirectory path #}
-                    {% if base_url in crumb.url %}
-                        {% set crumbl_full_url = crumb.url %}
+                    {% if base_url_relative in crumb.url %}
+                        {% set crumbl_full_url = base_url_absolute ~ crumb.url|replace({base_url_relative:''}) %}
                     {% else %}
                         {% set crumbl_full_url = base_url ~ crumb.url %}
                     {% endif %}
@@ -59,12 +59,12 @@
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
                             <a href="{{ crumb.url }}"
-                                itemid="{{ crumbl_full_url ~ crumb.url }}"
+                                itemid="{{ crumbl_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ crumbl_full_url ~ crumb.url }}"
+                            <span itemid="{{ crumbl_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
