@@ -35,7 +35,7 @@
                     itemtype="https://schema.org/ListItem">
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ crumb.url }}" itemid="{{ base_url_absolute ~ crumb.url }}"
+                            <a href="{{ crumb.url }}" itemid="{{ base_url ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
@@ -47,12 +47,12 @@
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
                             <a href="{{ crumb.url }}"
-                                itemid="{{ base_url_absolute ~ crumb.url }}"
+                                itemid="{{ base_url ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ base_url_absolute ~ crumb.url }}"
+                            <span itemid="{{ base_url ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
