@@ -40,9 +40,11 @@
 
                     {# When grav installed in subdirectory base_url, base_url_absolute and breadcrumbs.get().url contain this subdirectory path #}
                     {% if base_url_relative in crumb.url %}
+                        a
                         {% set crumbl_full_url = base_url_absolute ~ crumb.url|replace({base_url_relative:''}) %}
                     {% else %}
-                        {% set crumbl_full_url = base_url ~ crumb.url %}
+                        b
+                        {% set crumbl_full_url = base_url_absolute ~ crumb.url %}
                     {% endif %}
 
                     {% if not loop.last %}
