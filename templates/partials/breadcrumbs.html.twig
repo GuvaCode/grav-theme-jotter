@@ -12,7 +12,7 @@
         itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
 {% for crumb in crumbs %}
-            {{ url(crumb.url)replace({ (base_url_relative) : ''}) }} 
+            {{ url(crumb.url|replace({ (base_url_relative) : ''})) }} 
 {% endfor %}
         {% for crumb in crumbs %}
             {% set crumb_name %}
