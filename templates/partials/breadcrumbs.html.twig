@@ -8,11 +8,7 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-    <nav class="go-breadcrumb"
-        data-a="{{base_url}}"
-        data-b="{{base_url_absolute}}"
-        data-c="{{base_url_relative}}"
-        itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <nav class="go-breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
 
         {% for crumb in crumbs %}
@@ -38,7 +34,8 @@
                 <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
                     itemtype="https://schema.org/ListItem">
 
-                    {# When grav installed in subdirectory base_url, base_url_absolute and breadcrumbs.get().url contain this subdirectory path #}
+                    {# Workaround for situation when grav is installed in a sub-directory #}
+                    {# Then base_url, base_url_relative, base_url_absolute and breadcrumbs.get().url contain the subdirectory path #}
                     {% if base_url_relative in crumb.url %}
                         {% set crumb_full_url = base_url_absolute ~ crumb.url|replace({ (base_url_relative) : ''}) %}
                     {% else %}
