@@ -40,16 +40,14 @@
 
                     {# When grav installed in subdirectory base_url, base_url_absolute and breadcrumbs.get().url contain this subdirectory path #}
                     {% if base_url_relative in crumb.url %}
-                        a
-                        {% set crumbl_full_url = base_url_absolute ~ crumb.url|replace({base_url_relative:''}) %}
+                        {% set crumb_full_url = crumb.url|replace({base_url_relative: '---'}) %}
                     {% else %}
-                        b
-                        {% set crumbl_full_url = base_url_absolute ~ crumb.url %}
+                        {% set crumb_full_url = base_url_absolute ~ crumb.url %}
                     {% endif %}
 
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ crumb.url }}" itemid="{{ crumbl_full_url }}"
+                            <a href="{{ crumb.url }}" itemid="{{ crumb_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
@@ -61,12 +59,12 @@
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
                             <a href="{{ crumb.url }}"
-                                itemid="{{ crumbl_full_url }}"
+                                itemid="{{ crumb_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ crumbl_full_url }}"
+                            <span itemid="{{ crumb_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
