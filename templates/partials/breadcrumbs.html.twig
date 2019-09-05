@@ -8,10 +8,7 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-    <nav class="go-breadcrumb"
-        data-base-url="{{base_url}}"
-        data-base-url-relative="{{base_url_relative}}"
-        itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <nav class="go-breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
 
         {% for crumb in crumbs %}
@@ -36,9 +33,17 @@
             {% else %}
                 <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
                     itemtype="https://schema.org/ListItem">
+
+                    {# When grav installed in subdirectory base_url, base_url_absolute and breadcrumbs.get().url contain this subdirectory path #}
+                    {% if base_url_absolute in crumb.url %}
+                        {% set crumbl_full_url = crumb.url %}
+                    {% else %}
+                        {% set crumbl_full_url = base_url ~ crumb.url %}
+                    {% endif %}
+
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ crumb.url }}" itemid="{{ base_url ~ crumb.url }}"
+                            <a href="{{ crumb.url }}" itemid="{{ crumbl_full_url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
@@ -50,12 +55,12 @@
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
                             <a href="{{ crumb.url }}"
-                                itemid="{{ base_url ~ crumb.url }}"
+                                itemid="{{ crumbl_full_url ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ base_url ~ crumb.url }}"
+                            <span itemid="{{ crumbl_full_url ~ crumb.url }}"
                                 itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
