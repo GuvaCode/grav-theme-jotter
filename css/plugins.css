@@ -20,7 +20,7 @@
     display: inline-block;
     width: 100%;
     visibility: visible;
-    animation: fade-in 1s;
+    transition: display 0.5s, visible 0.5s 0.5s;
 }
 
 .search-wrapper {
