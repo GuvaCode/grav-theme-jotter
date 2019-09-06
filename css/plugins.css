@@ -13,13 +13,13 @@
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
     width: 100%;
-    transition: all 0.3s ease-out;
 }
 
 .search-wrapper-nav:hover .search-input,
 .search-wrapper-nav .search-input:focus {
     display: inline-block;
     visibility: visible;
+    animation: fade-in 1s;
 }
 
 .search-wrapper {
