@@ -17,12 +17,12 @@
 }
 
 #search-wrapper:hover .search-input {
-    display: block;
-    transform: scale(1.05) slow;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
 #search-wrapper .search-input:focus {
-    display: block;
+    display: inline-block;;
     transform: scale(1.05) slow;
 }
 
