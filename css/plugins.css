@@ -12,12 +12,13 @@
     margin-left: .25rem;
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
-    width: 100%;
+    width: 0%;
 }
 
 .search-wrapper-nav:hover .search-input,
 .search-wrapper-nav .search-input:focus {
     display: inline-block;
+    width: 100%;
     visibility: visible;
     animation: fade-in 1s;
 }
