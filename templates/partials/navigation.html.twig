@@ -43,9 +43,9 @@
         {% endfor %}
 
         {% if theme_config.sidebar.search.enabled %}
-            <a class="nav-item" href={{ config.plugins.simplesearch.route }}>
-                {# <i class="i-search font-sm"></i> #}
-                <img src="{{ url('plugin://simplesearch/assets/search.svg') }}"/>
+            <a class="nav-item" href={{ base_url ~ config.plugins.simplesearch.route }}>
+                <i class="i-search font-sm"></i>
+                {# <img src="{{ url('plugin://simplesearch/assets/search.svg') }}"/> #}
             </a>
         {% endif %}
     </div>
