@@ -41,5 +41,11 @@
                 {# <span class="nav-item active" style="{{ active_color }}">{{ page_menu }}</span> #}
             {% endif %}
         {% endfor %}
+
+        {% if theme_config.sidebar.search.enabled %}
+            <div class="nav-item">
+                {% include 'partials/simplesearch_searchbox.html.twig'%}
+            </div>
+        {% endif %}
     </div>
 </nav>
