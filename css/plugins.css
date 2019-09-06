@@ -8,11 +8,12 @@
 
 .search-wrapper-nav .search-input {
     display: none;
-    visibility: hidden;
     margin-left: .25rem;
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
-    width: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
 .search-wrapper-nav:hover .search-input,
@@ -20,7 +21,8 @@
     display: inline-block;
     width: 100%;
     visibility: visible;
-    transition: display 0.5s, visible 0.5s 0.5s;
+    opacity: 1;
+    transition-delay: 0s;
 }
 
 .search-wrapper {
