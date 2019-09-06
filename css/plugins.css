@@ -10,6 +10,7 @@
     margin-left: .25rem;
     padding-left: 1.2rem !important;
     background-color: #fcfcfc !important;
+    transition: all 0.5s ease-in-out;
 }
 
 #search-wrapper .search-input {
@@ -18,12 +19,10 @@
 
 #search-wrapper:hover .search-input {
     display: inline-block;
-    transition: all 0.3s ease-in-out;
 }
 
 #search-wrapper .search-input:focus {
     display: inline-block;;
-    transform: scale(1.05) slow;
 }
 
 /* recaptcha contact plugin */
