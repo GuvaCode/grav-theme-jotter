@@ -9,31 +9,35 @@
     {% set notepaper_width = theme_config.sidebar.widget_width ? theme_config.sidebar.widget_width ~ 'px' %}
     {% set notepaper_height = theme_config.sidebar.widget_height ? theme_config.sidebar.widget_height ~ 'px' %}
 
-    <div class="go-grid mb-4" id="sidebar">
-        {% if theme_config.sidebar.search.enabled %}
-            <div class="go-unit unit-auto mx-auto">
-                <div class="j-notepaper bg-lite j-shadow-stack mx-auto"
-                    style="width: {{ notepaper_width }};height: {{ notepaper_height }};
-                    background: {{ theme_config.sidebar.search.background ?: 'white' }};">
-                    <div class="notepaper-title">
-                        {% if theme_config.sidebar.search.title %}
-                            <span class="border-bottom border-r-0">
-                                {{ theme_config.sidebar.search.title|t }}
-                            </span>
-                        {% endif %}
+    <div
+        class="go-grid mb-4" id="sidebar">
+        {#
+                {% if theme_config.sidebar.search.enabled %}
+                    <div class="go-unit unit-auto mx-auto">
+                        <div
+                            class="j-notepaper bg-lite j-shadow-stack mx-auto"
+                            style="width: {{ notepaper_width }};height: {{ notepaper_height }}; background: {{
+                                theme_config.sidebar.search.background ?: 'white' }};">
+                            <div class="notepaper-title">
+                                {% if theme_config.sidebar.search.title %}
+                                    <span class="border-bottom border-r-0">
+                                        {{ theme_config.sidebar.search.title|t }}
+                                    </span>
+                                {% endif %}
+                            </div>
+                            <div class="notepaper-content">
+                                {% include 'partials/simplesearch_searchbox.html.twig'%}
+                            </div>
+                        </div>
                     </div>
-                    <div class="notepaper-content">
-                        {% include 'partials/simplesearch_searchbox.html.twig'%}
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-
+                {% endif %}
+         #}
         {% if theme_config.sidebar.archive.enabled %}
             <div class="go-unit unit-auto mx-auto">
-                <div class="j-notepaper bg-lite j-shadow-stack mx-auto"
-                    style="width: {{ notepaper_width }}; height: {{ notepaper_height }};
-                    background: {{ theme_config.sidebar.archive.background ?: 'white' }};">
+                <div
+                    class="j-notepaper bg-lite j-shadow-stack mx-auto"
+                    style="width: {{ notepaper_width }}; height: {{ notepaper_height }}; background: {{
+                        theme_config.sidebar.archive.background ?: 'white' }};">
                     <div class="notepaper-title">
                         {% if theme_config.sidebar.archive.title %}
                             <span class="border-bottom border-r-0">
@@ -52,9 +56,10 @@
 
         {% if config.plugins.taxonomylist.enabled and theme_config.sidebar.tags.enabled %}
             <div class="go-unit unit-auto mx-auto">
-                <div class="j-notepaper bg-lite j-shadow-stack mx-auto"
-                    style="width: {{ notepaper_width }}; height: {{ notepaper_height }};
-                    background: {{ theme_config.sidebar.tags.background ?: 'white' }};">
+                <div
+                    class="j-notepaper bg-lite j-shadow-stack mx-auto"
+                    style="width: {{ notepaper_width }}; height: {{ notepaper_height }}; background: {{
+                        theme_config.sidebar.tags.background?: 'white' }};">
                     <div class="notepaper-title">
                         {% if theme_config.sidebar.tags.title %}
                             <span class="border-bottom border-r-0">
@@ -84,26 +89,62 @@
     <script type="text/javascript">
         <!--
         // add transform-skew for the sidebar elements;
-        var skew_enabled = '{{ theme_config.sidebar.skew }}' ? true : false;
-        var get_random = function (list) {
-            return list[Math.floor((Math.random() * list.length))];
+        var skew_enabled = '{{ theme_config.sidebar.skew }}'
+            ? true
+            : false;
+        var get_random = function ( list )
+        {
+
+
+
+
+
+            return list[Math.floor (
+                ( Math.random () * list.length ))];
+
+
+
+
+
         };
 
-        if (skew_enabled) {
-            var sidebar_notes = document.getElementsByClassName('j-notepaper');
+        if ( skew_enabled )
+        {
 
-            for (let i = 0; i < sidebar_notes.length; i++) {
-                let d = get_random([0.5, 1, 1.5, 2]) * get_random([1, -1]);
-                let s = 'transform: skew(' +
-                        d +
-                        'deg, ' +
-                        (-d) +
-                        'deg);';
-                sidebar_notes[i].setAttribute('style', sidebar_notes[i].getAttribute('style') +
-                        s);
+
+
+
+
+            var sidebar_notes = document.getElementsByClassName ( 'j-notepaper' );
+
+            for ( let i = 0; i < sidebar_notes.length; i = i + 1 )
+            {
+
+
+
+
+
+                let d = get_random ( [
+                    0.5,
+                    1,
+                    1.5,
+                    2
+                ] ) * get_random ( [
+                    1,
+                    -1
+                ] );
+                let s = 'transform: skew(' + d + 'deg, ' + ( - d ) + 'deg);';
+                sidebar_notes[i].setAttribute ( 'style', sidebar_notes[i].getAttribute ( 'style' ) + s );
+
+
+
+
+
             }
+
         }
 
-        //-->
+        //
+        -->
     </script>
-{% endblock %}
+        {% endblock %}
