@@ -8,15 +8,19 @@
 
 .search-wrapper-nav .search-input {
     display: none;
+    opacity: 0;
     margin-left: .25rem;
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
     width: 100%;
+    transition: opacity .5s ease-out;
 }
 
 .search-wrapper-nav:hover .search-input,
 .search-wrapper-nav .search-input:focus {
     display: inline-block;
+    opacity: 1;
+
 }
 
 .search-wrapper {
