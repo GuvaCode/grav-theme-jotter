@@ -6,15 +6,12 @@
 
 /* Plugin styles */
 
-#search-wrapper {
-    transition: all .3s ease-in-out;
-}
-
 #search-wrapper .search-input {
-    margin-left: .25rem;
-    padding-left: 1.2rem !important;
-    background-color: #fcfcfc !important;
     display: none;
+    margin-left: .25rem;
+    padding-left: .25rem;
+    background-color: #fcfcfc !important;
+    transition: all .3s ease-in-out;
 }
 
 #search-wrapper:hover .search-input,
