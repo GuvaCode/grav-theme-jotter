@@ -38,7 +38,9 @@
                 <label class="accordion-title h3" for="page_toc">
                     {{ attribute(page.header, 'page-toc').title }}
                 </label>
-                <div class="accordion-content">{{ table_of_contents }}</div>
+                <div class="accordion-content">
+                    {{ table_of_contents }}
+                </div>
             {% endif %}
         </div>
     {% endif %}
@@ -52,16 +54,21 @@
 
     <div class="article-footer justify-between">
         <div class="article-meta">
-            <i class="i-eye font-sm"></i>{{ viewcounts[page.route]|default(0)}}
+            <i class="i-eye font-sm"></i>
+            {{ viewcounts[page.route]|default(0)}}
         </div>
-        <div>{% include 'partials/share_buttons.html.twig'%}</div>
+        <div>
+            {% include 'partials/share_buttons.html.twig'%}
+        </div>
     </div>
 </article>
 
 {% if config.get('plugins.jscomments.enabled') %}
     <div class="mb-4">
         {% if config.get('plugins.jscomments.active') or page.header.jscomments.active %}
-            <div>{% include "partials/jscomments.html.twig" %}</div>
+            <div>
+                {% include "partials/jscomments.html.twig" %}
+            </div>
         {% endif %}
     </div>
 {% endif %}

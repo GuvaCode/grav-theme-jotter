@@ -4,9 +4,8 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-<meta content="{{ (base_url_absolute ~ banner_url)|default('/')}}" itemprop="image"/>
-<link href="{{ base_url_absolute ~ page_url }}" itemType="https://schema.org/WebPage"
-    itemprop="mainEntityOfPage" itemscope="itemscope"/>
+<meta content="{{ (banner_url(true))|default('/')}}" itemprop="image"/>
+<link href="{{ page_url(true) }}" itemtype="https://schema.org/WebPage" itemprop="mainEntityOfPage" itemscope="itemscope"/>
 <span itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
     <meta content="{{ base_url_absolute }}" itemprop="name"/>
 </span>
@@ -14,15 +13,15 @@
     <meta content="{{ base_url_absolute }}" itemprop="url"/>
     <meta content="{{ config.site.title }}" itemprop="name"/>
     <span itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
-        <meta content="{{ base_url_absolute ~ banner_url|default('/') }}" itemprop="url"/>
+        <meta content="{{ banner_url(true)|default('/') }}" itemprop="url"/>
     </span>
 </span>
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="{{ config.site.title }}" />
-<meta name="twitter:image" content="{{ (base_url_absolute ~ banner_url)|default('/') }}" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="{{ config.site.title }}"/>
+<meta name="twitter:image" content="{{ (banner_url(true))|default('/') }}"/>
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ base_url_absolute ~ page_url }}" />
-<meta property="og:title" content="{{ page.title }}" />
-<meta property="og:description" content="{{ page.header.metadata.description|default(page.summary|striptags) }}" />
-<meta property="og:image" content="{{ (base_url_absolute ~ banner_url)|default('/') }}" />
+<meta property="og:url" content="{{ page_url(true) }}"/>
+<meta property="og:title" content="{{ page.title }}"/>
+<meta property="og:description" content="{{ page.header.metadata.description|default(page.summary|striptags) }}"/>
+<meta property="og:image" content="{{ (banner_url(true))|default('/') }}"/>

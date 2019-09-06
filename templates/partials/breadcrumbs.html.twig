@@ -13,14 +13,16 @@
 
         {% for crumb in crumbs %}
             {% set crumb_name %}
-                <span itemprop="name">{{ crumb.menu }}</span>
+            <span itemprop="name">
+                {{ crumb.menu }}
+            </span>
             {% endset %}
 
             {% if loop.first and breadcrumbs_config.include_home %}
                 {% set i = -1 %}
 
                 <span class="breadcrumb-item">
-                    <a href="{{ base_url_absolute ~ crumb.url }}">
+                    <a href="{{ crumb.url }}">
                         <span>
                             {% if breadcrumbs_config.icon_home %}
                                 <i class="i-home"></i>
@@ -31,12 +33,11 @@
                     </a>
                 </span>
             {% else %}
-                <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
-                    itemtype="https://schema.org/ListItem">
+                <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
+
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ base_url_absolute ~ crumb.url }}" itemid="{{ base_url_absolute ~ crumb.url }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <a href="{{ crumb.url }}" itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
@@ -46,14 +47,11 @@
                         <meta content="{{ loop.index + i }}" itemprop="position">
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
-                            <a href="{{ base_url_absolute ~ crumb.url }}"
-                                itemid="{{ base_url_absolute ~ crumb.url }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <a href="{{ crumb.url }}" itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ base_url_absolute ~ crumb.url }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <span itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
                         {% endif %}

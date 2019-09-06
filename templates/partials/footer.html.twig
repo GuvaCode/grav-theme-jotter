@@ -7,13 +7,17 @@
 {% set height = theme_config.footer.height ? theme_config.footer.height ~ 'px' %}
 {% set footer_text = config.site.title|lower %}
 
-<footer class="body-footer"  style="height:{{ height }};">
+<footer class="body-footer" style="height:{{ height }};">
     <div>
         &copy;&nbsp;2017-{{ "now"|date("Y") }}&nbsp;
         {% if page.url == '' or page.url == '/' %}
-            <span>{{ footer_text }}</span>
+            <span>
+                {{ footer_text }}
+            </span>
         {% else %}
-            <a href="{{ base_url == '' ? '/' : base_url }}">{{ footer_text }}</a>
+            <a href="{{ base_url == '' ? '/' : base_url }}">
+                {{ footer_text }}
+            </a>
         {% endif %}
     </div>
 </footer>
