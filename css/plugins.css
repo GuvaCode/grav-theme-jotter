@@ -21,7 +21,7 @@
 .search-wrapper-nav .search-input:focus {
     display: inline-block;
     opacity: 1;
-    height: 1;
+    height: auto;
 }
 
 .search-wrapper {
