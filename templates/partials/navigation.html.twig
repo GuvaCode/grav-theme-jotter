@@ -22,7 +22,7 @@
     </div>
     <div class="nav-list">
         {% for page in pages.children.visible %}
-            {% set page_menu %}
+            {% set menu %}
             {% if page.header.icon %}
                 <i class="{{ page.header.icon }}"></i>
             {% endif %}
@@ -32,20 +32,20 @@
 
             {% if not page.active %}
                 <a class="nav-item" href="{{ page.url }}">
-                    {{ page_menu }}
+                    {{ menu }}
                 </a>
             {% else %}
                 <a class="nav-item active" href="{{ page.url }}" style="{{ active_color }}">
-                    {{ page_menu }}
+                    {{ menu }}
                 </a>
                 {# <span class="nav-item active" style="{{ active_color }}">{{ page_menu }}</span> #}
             {% endif %}
         {% endfor %}
 
-        {% if theme_config.sidebar.search.enabled and url(false) != (config.plugins.simplesearch.route) %}
+        {% if theme_config.sidebar.search.enabled and page.url(false) != (config.plugins.simplesearch.route) %}
             {% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
 
-            <div class="nav-item search-wrapper-nav" data-a="{{url(false)}}" data-b="{{config.plugins.simplesearch.route}}">
+            <div class="nav-item search-wrapper-nav" data-a="{{page.url(false)}}" data-b="{{config.plugins.simplesearch.route}}">
                 <form name="search" data-simplesearch-form>
                     <div class="go-grid grid-nowrap">
                     <i class="i-search font-sm"></i>
