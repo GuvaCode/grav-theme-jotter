@@ -24,8 +24,8 @@
     <div class="article-meta align-right">
         {% include 'partials/date.html.twig' with { 'date': page.header.date|date('Y-m-d') } %}
         {% include 'partials/article_microdata.html.twig' with {
-            'banner_url' : banner.url,
-            'page_url' : page.url
+            'banner' : banner,
+            'page' : page
         } %}
     </div>
 
