@@ -35,13 +35,11 @@
 
 .search-wrapper {
     width: 100%;
-    padding: 1rem;
-    border: 2px solid pink;
 }
 
 .search-wrapper .search-input {
     width: 100% !important;
-    padding-left: 1.2rem !important;
+    padding-left: .25rem !important;
     background-color: #fcfcfc !important;
 }
 
