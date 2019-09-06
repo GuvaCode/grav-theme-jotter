@@ -8,11 +8,19 @@
     {% for month, items in archives_data %}
         <li>
             <span class="border-bottom border-r-0">
-                <a rel="nofollow"
-                    href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
-                    <span class="archive_date t-dark">&nbsp;{{ month }}</span>
+                <a rel="nofollow" href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+                    <span class="archive_date t-dark">
+                        &nbsp;
+                        {{ month }}
+                    </span>
                 </a>
-                {% if archives_show_count %}&nbsp;(<span class="t-r-0">{{ items|length }}</span>){% endif %}
+                {% if archives_show_count %}
+                    &nbsp;(
+                    <span class="t-r-0">
+                        {{ items|length }}
+                    </span>
+                    )
+                {% endif %}
             </span>
         </li>
     {% endfor %}

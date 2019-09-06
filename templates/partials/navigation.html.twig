@@ -9,7 +9,7 @@
 {% set icon = theme_config.navbar.icon %}
 
 <nav id="main_nav" class="go-nav nav-expand-md {{ classes }}" data-class="nav-open">
-    <a class="nav-toggle" data-id="main_nav"  href="javascript:void(0);">
+    <a class="nav-toggle" data-id="main_nav" href="javascript:void(0);">
         <i class="i-menu" data-icon="i-cancel" aria-hidden="true"></i>
     </a>
     <div class="nav-header">
@@ -23,17 +23,21 @@
     <div class="nav-list">
         {% for page in pages.children.visible %}
             {% set page_menu %}
-                {% if page.header.icon %}
-                    <i class="{{ page.header.icon }}"></i>
-                {% endif %}
+            {% if page.header.icon %}
+                <i class="{{ page.header.icon }}"></i>
+            {% endif %}
 
-                {{ page.menu }}
+            {{ page.menu }}
             {% endset %}
 
             {% if not page.active %}
-                <a class="nav-item" href="{{ page.url }}">{{ page_menu }}</a>
+                <a class="nav-item" href="{{ page.url }}">
+                    {{ page_menu }}
+                </a>
             {% else %}
-                <a class="nav-item active" href="{{ page.url }}" style="{{ active_color }}">{{ page_menu }}</a>
+                <a class="nav-item active" href="{{ page.url }}" style="{{ active_color }}">
+                    {{ page_menu }}
+                </a>
                 {# <span class="nav-item active" style="{{ active_color }}">{{ page_menu }}</span> #}
             {% endif %}
         {% endfor %}

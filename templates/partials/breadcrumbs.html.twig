@@ -8,15 +8,14 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-    <nav class="go-breadcrumb"
-        itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <nav class="go-breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
-{% for crumb in crumbs %}
-            {{ url(crumb.url|replace({ (base_url_relative) : ''})) }}
-{% endfor %}
+
         {% for crumb in crumbs %}
             {% set crumb_name %}
-                <span itemprop="name">{{ crumb.menu }}</span>
+            <span itemprop="name">
+                {{ crumb.menu }}
+            </span>
             {% endset %}
 
             {% if loop.first and breadcrumbs_config.include_home %}
@@ -34,29 +33,11 @@
                     </a>
                 </span>
             {% else %}
-                <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
-                    itemtype="https://schema.org/ListItem">
-
-                    {# Workaround for simultaneous use of both absolute and relative links when grav is installed in
-                        a sub-directory. For example:
-                        If grav is in https://example.com/grav/
-                        base_url_absolute == https://example.com/grav/
-                        base_url == /grav
-                        page.url == /grav/page.html
-                    #}
-
-                    {# {% if base_url == base_url_absolute %}
-                        {% set crumb_full_url = crumb.url %}
-                    {% elseif base_url_relative in base_url_absolute %}
-                        {% set crumb_full_url = base_url_absolute|replace({ (base_url_relative) : ''}) ~ crumb.url %}
-                    {% else %}
-                        {% set crumb_full_url = base_url_absolute ~ crumb.url %}
-                    {% endif %} #}
+                <span class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
 
                     {% if not loop.last %}
                         {% if crumb.routable %}
-                            <a href="{{ crumb.url }}" itemid="{{ crumb.url(true) }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <a href="{{ crumb.url }}" itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
@@ -66,14 +47,11 @@
                         <meta content="{{ loop.index + i }}" itemprop="position">
                     {% else %}
                         {% if breadcrumbs_config.link_trailing %}
-                            <a href="{{ crumb.url }}"
-                                itemid="{{ crumb.url(true) }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <a href="{{ crumb.url }}" itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </a>
                         {% else %}
-                            <span itemid="{{ crumb.url(true) }}"
-                                itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
+                            <span itemid="{{ crumb.url(true) }}" itemprop="item" itemscope="itemscope" itemtype="https://schema.org/Thing">
                                 {{ crumb_name }}
                             </span>
                         {% endif %}
