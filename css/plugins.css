@@ -6,10 +6,24 @@
 
 /* Plugin styles */
 
-.search-wrapper .search-input {
-    /* width: 100%; */
+#search-wrapper .search-input {
+    margin-left: .25rem;
     padding-left: 1.2rem !important;
     background-color: #fcfcfc !important;
+}
+
+#search-wrapper .search-input {
+    display: none;
+}
+
+#search-wrapper:hover .search-input {
+    display: block;
+    transform: scale(1.05) slow;
+}
+
+#search-wrapper .search-input:focus {
+    display: block;
+    transform: scale(1.05) slow;
 }
 
 /* recaptcha contact plugin */
