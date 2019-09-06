@@ -14,7 +14,9 @@
     <header class="card-title">
         <h2 class="h4" itemprop="headline name">
             <a href="{{ page.url }}">
-                <span class="border-bottom border-r-0">{{ page.title|upper }}</span>
+                <span class="border-bottom border-r-0">
+                    {{ page.title|upper }}
+                </span>
             </a>
         </h2>
     </header>
@@ -24,11 +26,18 @@
             <div class="go-unit unit-auto unit-12-sm">
                 <i class="i-calendar font-sm"></i>
                 {% include 'partials/date.html.twig' with { 'date': page.header.date|date('Y-m-d') } %}
-                <span class="hide-sm"> | </span>
+                <span class="hide-sm">
+                    |
+                </span>
             </div>
             <div class="go-unit unit-auto unit-12-sm">
-                <i class="i-folder font-sm"></i><a href="{{ page.parent.url }}">{{ page.parent.title }}</a>
-                <span class="hide-sm"> | </span>
+                <i class="i-folder font-sm"></i>
+                <a href="{{ page.parent.url }}">
+                    {{ page.parent.title }}
+                </a>
+                <span class="hide-sm">
+                    |
+                </span>
             </div>
             <div class="go-unit unit-auto unit-12-sm">
                 {% include 'partials/tag_buttons.html.twig' with {'page': page, 'base_url': base_url} %}
@@ -37,7 +46,11 @@
     </div>
 
     <div>
-        {% include 'partials/article_microdata.html.twig' with {'banner_url' : banner.url, 'page_url' : page.url} %}
+        {% include 'partials/article_microdata.html.twig' with {
+                'banner' : banner,
+                'page' : page
+            }
+        %}
     </div>
 
     {% if page.header.metadata.description and page.header.description.preview %}
@@ -46,11 +59,14 @@
         {% set content = page.summary|striptags|replace({'\n': '', '\r\n': '', '\t': '', '\n\r': ''}) %}
     {% endif %}
 
-    <div class="card-content" itemprop="description">{{ content }}</div>
+    <div class="card-content" itemprop="description">
+        {{ content }}
+    </div>
 
     <div class="card-footer justify-between">
         <div class="card-meta">
-            <i class="i-eye font-sm"></i>{{ viewcounts[page.route]|default(0)}}
+            <i class="i-eye font-sm"></i>
+            {{ viewcounts[page.route]|default(0)}}
         </div>
         <div>
             {% include 'partials/share_buttons.html.twig'%}
