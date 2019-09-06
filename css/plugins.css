@@ -7,13 +7,11 @@
 /* Plugin styles */
 
 .search-wrapper-nav .search-input {
+    display: none;
+    font-size: inherit;
     margin-left: .25rem;
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
-}
-
-.search-wrapper-nav .search-input {
-    display: none;
 }
 
 .search-wrapper-nav:hover .search-input,
