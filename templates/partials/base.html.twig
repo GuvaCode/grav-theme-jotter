@@ -24,14 +24,13 @@
                     {% endif %}
                 </title>
 
-                <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-                <meta content="width=device-width, initial-scale=1" name="viewport" />
+                <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+                <meta content="width=device-width, initial-scale=1" name="viewport"/>
                 {% include 'partials/metadata.html.twig' with {'page' : page } %}
 
                 <link href="{{ url('theme://images/logo.png') }}" rel="icon" type="image/png"/>
                 <link href="{{ page.url(true, true) }}" rel="canonical"/>
-                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500&amp;subset=cyrillic-ext"
-                    rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500&amp;subset=cyrillic-ext" rel="stylesheet">
 
                 {% block stylesheets %}
                     {% do assets.addCss('theme://css/go-ui.min.css', 100) %}
@@ -67,15 +66,13 @@
             {% endblock %}
 
             {% block body %}
-                <div class="body-content"
-                    style="{% if color %}color:{{ color }};{% endif %}{% if bg %}background-color:{{ bg }};{% endif %}">
-                    <div class="go-container"
-                        style="max-width:{{ max_width }};">
-                        {% block content %}{% endblock %}
+                <div class="body-content" style="{% if color %}color:{{ color }};{% endif %}{% if bg %}background-color:{{ bg }};{% endif %}">
+                    <div class="go-container" style="max-width:{{ max_width }};">
+                        {% block content %}
+                        {% endblock %}
                     </div>
                 </div>
-                <a class="back-to-top" data-icon="{{ theme_url }}/images/to_top.png"
-                    data-time="10" href="javascript:void(0);" id="back-to-top" title="Up"></a>
+                <a class="back-to-top" data-icon="{{ theme_url }}/images/to_top.png" data-time="10" href="javascript:void(0);" id="back-to-top" title="Up"></a>
             {% endblock %}
 
             {% block footer %}
