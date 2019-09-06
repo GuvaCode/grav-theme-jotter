@@ -13,6 +13,7 @@
     padding-left: .25rem !important;
     background-color: #fcfcfc !important;
     width: 100%;
+    height: 0;
     transition: opacity .5s ease-out;
 }
 
@@ -20,7 +21,7 @@
 .search-wrapper-nav .search-input:focus {
     display: inline-block;
     opacity: 1;
-
+    height: 1;
 }
 
 .search-wrapper {
