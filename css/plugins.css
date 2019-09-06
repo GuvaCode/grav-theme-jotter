@@ -18,7 +18,7 @@
 
 .search-wrapper-nav:hover .search-input,
 .search-wrapper-nav .search-input:focus {
-    display: inline;
+    display: inline-block;
 }
 
 .search-wrapper {
