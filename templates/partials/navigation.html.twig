@@ -45,7 +45,7 @@
         {% if theme_config.sidebar.search.enabled and url(false) != (config.plugins.simplesearch.route) %}
             {% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
 
-            <div class="nav-item search-wrapper-nav">
+            <div class="nav-item search-wrapper-nav" data-a="{{url(false)}}" data-b="{{config.plugins.simplesearch.route}}">
                 <form name="search" data-simplesearch-form>
                     <div class="go-grid grid-nowrap">
                     <i class="i-search font-sm"></i>
