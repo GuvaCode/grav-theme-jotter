@@ -6,14 +6,36 @@
 
 /* Plugin styles */
 
-#search-wrapper {
+.search-wrapper-nav .search-input {
+    margin-left: .25rem;
+    padding-left: 1.2rem !important;
+    background-color: #fcfcfc !important;
+}
+
+.search-wrapper-nav .search-input {
+    display: none;
+}
+
+.search-wrapper-nav:hover .search-input,
+.search-wrapper-nav .search-input:focus {
+    display: block;
+}
+
+.search-wrapper {
+    position: relative !important;
     margin: 1rem 0 !important;
 }
 
-#search-wrapper .search-input {
+.search-wrapper .fa-search {
+    color: #555 !important;
+    position: absolute !important;
+    top: 0.25rem !important;
+    left: 0.25rem !important;
+}
+
+.search-wrapper .search-input {
     width: 100% !important;
-    margin-left: .25rem;
-    padding-left: 0.25rem !important;
+    padding-left: 1.2rem !important;
     background-color: #fcfcfc !important;
 }
 
@@ -98,10 +120,12 @@ ul.archives li > a {
     background-color: whitesmoke;
     border-bottom: 2px solid #28a745;
 }
+
 .page-toc ul {
     list-style-type: none;
     padding-left: 0.5rem !important;
 }
+
 .page-toc ul li {
     font-weight: normal;
 }
