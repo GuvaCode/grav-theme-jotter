@@ -42,7 +42,7 @@
             {% endif %}
         {% endfor %}
 
-        {% if theme_config.sidebar.search.enabled and page.url(false) != (config.plugins.simplesearch.route) %}
+        {% if theme_config.sidebar.search.enabled and uri.path() != (config.plugins.simplesearch.route) %}
             {% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
 
             <div class="nav-item search-wrapper-nav" data-a="{{uri.path()}}" data-b="{{config.plugins.simplesearch.route}}">
