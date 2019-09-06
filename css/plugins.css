@@ -13,6 +13,7 @@
     align-content: flex-start;
     overflow-x: auto!important;
 }
+
 .search-wrapper-nav .search-input {
     margin-left: .25rem;
     padding-left: .25rem !important;
