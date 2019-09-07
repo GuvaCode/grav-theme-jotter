@@ -9,14 +9,14 @@
 {% set bg = theme_config.list.widget.background_color %}
 
 <div class="go-unit unit-auto mx-auto">
-    <a href="{{ list.url }}">
+    <a href="{{ listing.url }}">
         <div class="j-shadow-stack bg-image bg-lite m-3"
                 style="background-image:url({{ banner.quality(32).url }});
                 {% if width %}width:{{ width }};{% endif %}
                 {% if height %}height:{{ height }};{% endif %}
                 {% if bg %}background-color:{{ bg }};{% endif %}">
             <div class="sticker">
-                <span class="h4 t-break t-dark">{{ list.title }}</span>
+                <span class="h4 t-break t-dark">{{ listing.title }}</span>
             </div>
         </div>
     </a>
