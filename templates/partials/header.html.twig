@@ -13,7 +13,7 @@
 
 <header class="{{ classes }} body-header">
     {% include 'partials/navigation.html.twig' %}
-    <div class="go-hero bg-image" style="{% if banner %}background-image:url('{{ banner.quality(32).url }}');{% endif %} {% if height %}height:{{ height }};{% endif %} {% if color %}color:{{ color }};{% endif %} {% if bg %}background-color:{{ bg }};{% endif %}">
+    <div class="go-hero bg-image" style="{% if banner %}background-image:url('{{ banner.quality(64).url }}');{% endif %} {% if height %}height:{{ height }};{% endif %} {% if color %}color:{{ color }};{% endif %} {% if bg %}background-color:{{ bg }};{% endif %}">
         <h1 class="hero-title j-t-shadow">
             {% if page.home %}
                 {{ site.title|default(page.title)|e }}
