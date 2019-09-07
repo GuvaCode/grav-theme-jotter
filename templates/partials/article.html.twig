@@ -6,8 +6,8 @@
 
 <article class="go-article" itemscope="itemscope" itemtype="https://schema.org/Article">
     {% set banner = page.media[page.template() ~ '.png']|default(page.media[page.template() ~ '.png'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
-    {% for i in page.media() %}
-        <div>{{i}} </div>
+    {% for media` in page.media.images %}
+        <div>{{ media.url() }}</div>
     {% endfor %}
 
     <header class="article-title" data-t="{{page.template()}}">
