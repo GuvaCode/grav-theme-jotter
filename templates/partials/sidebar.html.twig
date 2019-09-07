@@ -88,42 +88,19 @@
 
     <script type="text/javascript">
         <!--
-        // add transform-skew for the sidebar elements;
+        // Add transform-skew for the sidebar elements;
         var skew_enabled = '{{ theme_config.sidebar.skew }}'
             ? true
             : false;
-        var get_random = function ( list )
-        {
-
-
-
-
-
+        var get_random = function ( list ) {
             return list[Math.floor (
                 ( Math.random () * list.length ))];
-
-
-
-
-
         };
 
-        if ( skew_enabled )
-        {
-
-
-
-
-
+        if ( skew_enabled ) {
             var sidebar_notes = document.getElementsByClassName ( 'j-notepaper' );
 
-            for ( let i = 0; i < sidebar_notes.length; i = i + 1 )
-            {
-
-
-
-
-
+            for ( let i = 0; i < sidebar_notes.length; i = i + 1 ) {
                 let d = get_random ( [
                     0.5,
                     1,
@@ -134,17 +111,11 @@
                     -1
                 ] );
                 let s = 'transform: skew(' + d + 'deg, ' + ( - d ) + 'deg);';
+
                 sidebar_notes[i].setAttribute ( 'style', sidebar_notes[i].getAttribute ( 'style' ) + s );
-
-
-
-
-
             }
-
         }
-
         //
         -->
     </script>
-        {% endblock %}
+{% endblock %}
