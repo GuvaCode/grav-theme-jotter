@@ -6,6 +6,9 @@
 
 <article class="go-article" itemscope="itemscope" itemtype="https://schema.org/Article">
     {% set banner = page.media[page.template() ~ '.png']|default(page.media[page.template() ~ '.png'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
+    {% for i in page.media %}
+        <div>{{i}} </div>
+    {% endfor %}
 
     <header class="article-title" data-t="{{page.template()}}">
         <h2 itemprop="headline name">
