@@ -4,19 +4,23 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-{% set width = theme_config.blog.topic.widget_width ? theme_config.blog.topic.widget_width ~ 'px' %}
-{% set height = theme_config.blog.topic.widget_height ? theme_config.blog.topic.widget_height ~ 'px' %}
-{% set bg = theme_config.blog.topic.background_color %}
+{% set width = theme_config.blog.page.widget_width ? theme_config.blog.page.widget_width ~ 'px' %}
+{% set height = theme_config.blog.page.widget_height ? theme_config.blog.page.widget_height ~ 'px' %}
+{% set bg = theme_config.blog.page.background_color %}
 
 <div class="go-unit unit-auto mx-auto">
-    <a href="{{ topic.url }}">
-        <div class="j-shadow-stack bg-image bg-lite m-3"
-                style="background-image:url({{ banner.quality(32).url }});
-                {% if width %}width:{{ width }};{% endif %}
-                {% if height %}height:{{ height }};{% endif %}
-                {% if bg %}background-color:{{ bg }};{% endif %}">
+    <a href="{{ page.url }}">
+        <div
+            class="j-shadow-stack bg-image bg-lite m-3"
+            style="background-image:url({{ banner.quality(32).url }});
+            {% if width %}width:{{ width }};{% endif %}
+            {% if height %}height:{{ height }};{% endif %}
+            {% if bg %}background-color:{{ bg }};{% endif %}">
+
             <div class="sticker">
-                <span class="h4 t-break t-dark">{{ topic.title }}</span>
+                <span class="h4 t-break t-dark">
+                    {{ page.title }}
+                </span>
             </div>
         </div>
     </a>
