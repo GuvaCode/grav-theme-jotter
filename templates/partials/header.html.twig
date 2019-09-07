@@ -4,7 +4,8 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-{% set banner = page.media['__hero__.jpg']|default(page.media['__hero__.png'])|default(page.media.images|first) %}
+{# {% set banner = page.media['__hero__.jpg']|default(page.media['__hero__.png'])|default(page.media.images|first) %} #}
+{% set banner = page.media[page.template() ~ '.jpg']|default(page.media[page.template() ~ '.jpeg'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
 {% set height = theme_config.hero.height ? theme_config.hero.height ~ 'px' %}
 {% set color = theme_config.hero.color %}
 {% set bg = theme_config.hero.background_color %}
