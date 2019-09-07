@@ -5,7 +5,7 @@
 #}
 
 <article class="go-article" itemscope="itemscope" itemtype="https://schema.org/Article">
-    {% set banner = page.media[page.template() ~ '.jpg']|default( page.media[page.template() ~ '.jpeg'])|default( page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
+    {% set banner = page.media[page.template() ~ '.jpg']|default(page.media[page.template() ~ '.jpeg'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
 
     <header class="article-title" data-t="{{page.template()}}">
         <h2 itemprop="headline name">
