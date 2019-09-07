@@ -5,7 +5,8 @@
 #}
 
 <article class="go-article" itemscope="itemscope" itemtype="https://schema.org/Article">
-    {% set banner = page.media[page.template() ~ '.png']|default(page.media[page.template() ~ '.png'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
+    {# {% set banner = page.media[page.template() ~ '.png']|default(page.media[page.template() ~ '.png'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %} #}
+    {% set banner = page.media[page.template() ~ '.png'] %}
     {% for media in page.media.images %}
         <div>{{ media.url() }}</div>
     {% endfor %}
