@@ -10,6 +10,7 @@
         <div>{{ media.url() }}</div>
     {% endfor %}
 
+    <div>{{ page.media[page.template() ~ '.png'].url() }}</div>
     <header class="article-title" data-t="{{page.template()}}">
         <h2 itemprop="headline name">
             <span class="border-bottom border-r-0">
