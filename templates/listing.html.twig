@@ -15,13 +15,13 @@
     <div class="go-grid">
         <div class="{{ theme_config.sidebar.enabled ? 'go-unit unit-8 unit-12-md' : 'go-unit unit-auto mx-auto' }}" data-t="{{page.content.filter}}">
         
-            {% if page.header.content.filter.type == 'blog' %}
+            {% if page.header.content.filter.type == 'listing' %}
                 <div class="go-grid">
 
                     {% for p in page.collection %}
                         {% set banner = p.media[p.template() ~ '.jpg']|default(p.media[p.template() ~ '.jpeg'])|default(p.media[p.template() ~ '.png'])|default(p.media.images|first) %}
 
-                        {% include 'partials/topic_item.html.twig' with {'banner': banner, 'topic': p } %}
+                        {% include 'partials/list.html.twig' with {'banner': banner, 'list': p } %}
                     {% endfor %}
                 </div>
             {% else %}
