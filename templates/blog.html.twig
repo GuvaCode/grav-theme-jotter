@@ -8,31 +8,41 @@
 
 {% block content %}
 
-{% if config.plugins.breadcrumbs.enabled and page.url != "/" %}
-    {% include 'partials/breadcrumbs.html.twig' %}
-{% endif %}
+    {% if config.plugins.breadcrumbs.enabled and page.url != "/" %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
 
-<div class="go-grid">
-    <div class="{{ theme_config.sidebar.enabled ? "go-unit unit-8 unit-12-md" : "go-unit unit-auto mx-auto" }}">
-        <main>
-            {% for p in page.collection %}
-                {% include 'partials/preview.html.twig' with {
-                    'page' : p
-                } %}
-            {% endfor %}
-        </main>
-        {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
-            {% include 'partials/pagination.html.twig' with {
-                'base_url' : page.url,
-                'pagination' : page.collection.params.pagination
+    <div class="go-grid">
+        <div class="{{ theme_config.sidebar.enabled ? 'go-unit unit-8 unit-12-md' : 'go-unit unit-auto mx-auto' }}">
+            {% if page.content.filter.type == 'blog' %}
+                <div class="go-grid">
+
+                {% for topic in page.collection %}
+                    {% set banner = topic.media[topic.template() ~ '.jpg']|default(topic.media[topic.template() ~ '.jpeg'])|default(topic.media[topic.template() ~ '.png'])|default(topic.media.images|first) %}
+
+                    {% include 'partials/topic_item.html.twig' with {'banner': banner} %}
+                {% endfor %}
+            </div>
+            {% else %}
+                <main>
+                    {% for p in page.collection %}
+                        {% include 'partials/preview.html.twig' with { 'page' : p } %}
+                    {% endfor %}
+                </main>
+            {% endif %}
+
+            {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+                {% include 'partials/pagination.html.twig' with {
+                'base_url': page.url,
+                'pagination': page.collection.params.pagination
             } %}
+            {% endif %}
+        </div>
+        {% if theme_config.sidebar.enabled %}
+            <div class="go-unit unit-4 unit-12-md">
+                {% include 'partials/sidebar.html.twig' %}
+            </div>
         {% endif %}
     </div>
-    {% if theme_config.sidebar.enabled %}
-        <div class="go-unit unit-4 unit-12-md">
-            {% include 'partials/sidebar.html.twig' %}
-        </div>
-    {% endif %}
-</div>
 
 {% endblock %}
