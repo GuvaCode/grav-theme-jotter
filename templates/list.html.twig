@@ -15,7 +15,7 @@
     <div class="go-grid">
         <div class="{{ theme_config.sidebar.enabled ? 'go-unit unit-8 unit-12-md' : 'go-unit unit-auto mx-auto' }}" data-t="{{page.content.filter}}">
         
-            {% if page.header.content.filter.type == 'listing' %}
+            {% if page.header.content.filter.type == 'list' %}
                 <div class="go-grid">
 
                     {% for p in page.collection %}

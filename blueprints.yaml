@@ -100,12 +100,12 @@ form:
                   highlight: 0
                   validate:
                     type: int
-            blog:
+            list:
               type: section
-              title: Blog
+              title: List
               underline: true
               fields:
-                blog.topic.widget_width:
+                list.widget.width:
                   type: number
                   label: Topic widget width
                   default: 240
@@ -114,7 +114,7 @@ form:
                   size: small
                   validate:
                     type: int
-                blog.topic.widget_height:
+                list.widget.height:
                   type: number
                   label: Topic widget height
                   default: 320
@@ -123,7 +123,7 @@ form:
                   size: small
                   validate:
                     type: int
-                blog.topic.background_color:
+                list.widget.background_color:
                   type: colorpicker
                   default: '#fefefe'
                   label: Background
