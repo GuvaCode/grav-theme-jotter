@@ -107,7 +107,7 @@ form:
               fields:
                 list.widget.width:
                   type: number
-                  label: Topic widget width
+                  label: Listing widget width
                   default: 240
                   placeholder: e.g. 240
                   append: 'px'
@@ -116,7 +116,7 @@ form:
                     type: int
                 list.widget.height:
                   type: number
-                  label: Topic widget height
+                  label: Listing widget height
                   default: 320
                   placeholder: e.g. 320
                   append: 'px'
