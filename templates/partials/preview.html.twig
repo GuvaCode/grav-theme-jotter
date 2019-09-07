@@ -5,8 +5,7 @@
 #}
 
 <section class="go-card j-shadow bg-paper-photo mx-0" itemscope="itemscope" itemtype="https://schema.org/Article">
-    {% set banner = page.media['__hero__.jpg']|default(page.media['__hero__.png'])|default(page.media.images|first) %}
-
+{% set banner = page.media[page.template() ~ '.jpg']|default(page.media[page.template() ~ '.jpeg'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
     {% if banner %}
         <a class="card-image bg-image" href="{{ page.url }}" style="background-image:url('{{ banner.quality(32).url }}')"></a>
     {% endif %}

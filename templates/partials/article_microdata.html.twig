@@ -16,7 +16,8 @@
     <meta content="{{ base_url_absolute }}" itemprop="url"/>
     <meta content="{{ config.site.title }}" itemprop="name"/>
     <span itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
-        <meta content="{{ banner_url|default('/') }}" itemprop="url"/>
+        {# <meta content="{{ banner_url|default('/') }}" itemprop="url"/> #}
+        <meta content="{% if banner %}{{ banner.quality(32).url()}}{% else %}/{% endif %}" itemprop="url"/>
     </span>
 </span>
 
