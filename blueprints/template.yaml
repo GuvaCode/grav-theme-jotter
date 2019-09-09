@@ -25,5 +25,19 @@ form:
               unset@: true
         options:
           unset@: true
-
+          fields:
+            publishing:
+              type: section
+              title: 'Published'
+              fields:
+                header.published:
+                  type: toggle
+                  togglable: true
+                  label: PLUGIN_ADMIN.PUBLISHED
+                  default: false
+                  option:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
