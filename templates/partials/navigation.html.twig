@@ -42,9 +42,8 @@
             {% endif %}
         {% endfor %}
 
-        {% if theme_config.sidebar.search.enabled and uri.path() != (config.plugins.simplesearch.route) %}
-        {% include 'partials/simplesearch_navigation.html.twig' %}
-
+        {% if config.plugins.simplesearch.enabled and uri.path() != (config.plugins.simplesearch.route) %}
+            {% include 'partials/simplesearch_navigation.html.twig' %}
         {% endif %}
     </div>
 </nav>
