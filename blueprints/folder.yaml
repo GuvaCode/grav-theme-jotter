@@ -25,12 +25,3 @@ form:
           fields:
             publishing:
               unset@: true
-<<<<<<< HEAD
-
-=======
-            collection:
-              unset@: true
-            pagination:
-              unset@: true
-             
->>>>>>> 61590f6438b3d2641572cb1ff0cd9004ab970ff1
