@@ -42,7 +42,7 @@ form:
                 content.color:
                   type: colorpicker
                   label: Color
-                content.background_color:
+                content.background:
                   type: colorpicker
                   label: Background
             hero:
@@ -62,7 +62,7 @@ form:
                 hero.color:
                   type: colorpicker
                   label: Color
-                hero.background_color:
+                hero.background:
                   type: colorpicker
                   label: Background
             navbar:
@@ -123,7 +123,7 @@ form:
                   size: small
                   validate:
                     type: int
-                list.widget.background_color:
+                list.widget.background:
                   type: colorpicker
                   default: '#fefefe'
                   label: Background

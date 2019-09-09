@@ -6,7 +6,7 @@
 
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 
-{% set bg = theme_config.content.background_color %}
+{% set bg = theme_config.content.background %}
 {% set color = theme_config.content.color %}
 {% set max_width = theme_config.content.max_width ? theme_config.content.max_width ~ 'px' %}
 
