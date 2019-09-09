@@ -43,4 +43,7 @@ form:
                     0: PLUGIN_ADMIN.NO
                   validate:
                     type: bool
-
+            sitemap:
+              fields:
+                changefeq:
+                  default: never
