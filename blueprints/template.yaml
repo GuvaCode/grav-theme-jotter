@@ -23,6 +23,9 @@ form:
               unset@: true
         options:
           fields:
-            publishing.published: false
-          unset@: true
+            publishing:
+              fields:
+                published:
+                  default: false
+          # unset@: true
 
