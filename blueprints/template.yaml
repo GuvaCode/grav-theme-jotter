@@ -20,11 +20,12 @@ form:
             header.hero.subtitle:
               unset@: true
             header.media_order:
+              unset@: true
         options:
-          # unset@: true
+          unset@: true
           fields:
             publishing:
-              # unset@: true
+              unset@: true
               fields:
                 header.published:
                   default: false
