@@ -22,6 +22,4 @@ form:
             header.hero.subtitle:
               unset@: true
         options:
-          fields:
-            publishing:
-              unset@: true
+          unset@: true
