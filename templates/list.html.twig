@@ -21,7 +21,7 @@
                     {% for p in page.collection %}
                         {% set banner = p.media[p.template() ~ '.jpg']|default(p.media[p.template() ~ '.jpeg'])|default(p.media[p.template() ~ '.png'])|default(p.media.images|first) %}
 
-                        {% include 'partials/listing.html.twig' with {'banner': banner, 'listing': p } %}
+                        {% include 'partials/list.html.twig' with {'banner': banner, 'listing': p } %}
                     {% endfor %}
                 </div>
             {% else %}

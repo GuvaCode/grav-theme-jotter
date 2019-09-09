@@ -4,17 +4,14 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-{% set width = theme_config.list.widget.width ? theme_config.list.widget.width ~ 'px' %}
-{% set height = theme_config.list.widget.height ? theme_config.list.widget.height ~ 'px' %}
-{% set bg = theme_config.list.widget.background_color %}
-
+{% widget =  theme_config.list.widget %}
 <div class="go-unit unit-auto mx-auto">
     <a href="{{ listing.url }}">
         <div class="j-shadow-stack bg-image bg-lite m-3"
                 style="background-image:url({{ banner.quality(32).url }});
-                {% if width %}width:{{ width }};{% endif %}
-                {% if height %}height:{{ height }};{% endif %}
-                {% if bg %}background-color:{{ bg }};{% endif %}">
+                {% if widget.width %}width:{{ widget.width }}px;{% endif %}
+                {% if widget.height %}height:{{ widget.height }}px;{% endif %}
+                {% if widget.background_color %}background-color:{{ widget.background_color }};{% endif %}">
             <div class="sticker">
                 <span class="h4 t-break t-dark">{{ listing.title }}</span>
             </div>
