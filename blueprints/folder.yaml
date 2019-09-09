@@ -14,12 +14,6 @@ form:
       active: 1
       fields:
         content:
-          fields:
-            header.hero.title:
-              unset@: true
-            header.hero.subtitle:
-              unset@: true
-            header.media_order:
-              unset@: true
+          unset@: true
         options:
           unset@: true
