@@ -171,7 +171,7 @@ form:
                     0: PLUGIN_ADMIN.DISABLED
                   validate:
                     type: bool
-                sidebar.widget_width:
+                sidebar.widget.width:
                   type: number
                   label: Widget width
                   help: Sidebar widgets width
@@ -181,7 +181,7 @@ form:
                   size: small
                   validate:
                     type: int
-                sidebar.widget_height:
+                sidebar.widget.height:
                   type: number
                   label: Widget height
                   help: Sidebar widgets height
@@ -191,7 +191,7 @@ form:
                   size: small
                   validate:
                     type: int
-                sidebar.skew:
+                sidebar.widget.skew:
                   type: toggle
                   label: Skew widgets
                   help: Randomly skew sidebar widgets
