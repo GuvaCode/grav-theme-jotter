@@ -23,6 +23,6 @@ form:
               unset@: true
         options:
           unset@: true
-        options.publishing.header.published:
+        header.published:
           default: false
 
