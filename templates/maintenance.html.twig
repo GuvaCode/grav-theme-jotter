@@ -10,10 +10,12 @@
 
     <div class="go-article">
         <h2 class="article-title">
-            <span class="border-bottom border-r-0">SITE UNDERR MAINTENANCE</span>
+            <span class="border-bottom border-r-0">
+                {{ PLUGIN_MAINTENANCE.OFFLINE_MARKDOWN|t|markdown|raw) }}
+            </span>
         </h2>
         <div class="article-content">
-            {{ page.content|default('PLUGIN_MAINTENANCE.OFFLINE_MARKDOWN'|t|markdown|raw) }}
+            {{ page.content }}
 
             {% if maintenance.allow_login and not grav.user.authenticated %}
                 <div id="maintenance-login">
