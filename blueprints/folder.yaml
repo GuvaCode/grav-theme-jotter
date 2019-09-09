@@ -15,13 +15,11 @@ form:
       fields:
         content:
           fields:
-            content:
-              unset@: true
             header.hero.title:
               unset@: true
             header.hero.subtitle:
               unset@: true
-            media_order:
+            header.media_order:
               unset@: true
         options:
           unset@: true
