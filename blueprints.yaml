@@ -191,7 +191,7 @@ form:
                   size: small
                   validate:
                     type: int
-                sidebar.skew:
+                sidebar.widget.skew:
                   type: toggle
                   label: Skew widgets
                   help: Randomly skew sidebar widgets
