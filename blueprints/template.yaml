@@ -15,16 +15,21 @@ form:
       fields:
         content:
           fields:
+            header.hero.title:
+              unset@: true
             header.hero.subtitle:
               unset@: true
+            header.media_order:
+              unset@: true
         options:
-          fields:
-            publishing:
-              unset@: true
-            description:
-              unset@: true
-            taxonomies:
-              unset@: true
-            page-toc:
-              unset@: true
+          unset@: true
+          # fields:
+          #   publishing:
+          #     unset@: true
+          #   description:
+          #     unset@: true
+          #   taxonomies:
+          #     unset@: true
+          #   page-toc:
+          #     unset@: true
 
