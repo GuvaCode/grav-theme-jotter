@@ -32,8 +32,10 @@ form:
               fields:
                 header.published:
                   type: toggle
-                  togglable: true
+                  toggleable: true
                   label: PLUGIN_ADMIN.PUBLISHED
+                  help: PLUGIN_ADMIN.PUBLISHED_HELP
+                  highlight: 1
                   default: false
                   size: medium
                   options:
