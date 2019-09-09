@@ -9,20 +9,22 @@ form:
         content:
           type: tab
           fields:
+            header.title:
+              ordering@: 1
             header.hero.title:
               type: text
               toggleable: true
               label: Hero title
               help: Page title displayed on page hero
               style: vertical
-              ordering@: 1
+              ordering@: 2
             header.hero.subtitle:
               type: text
               toggleable: true
               label: Hero subtitle
               help: Page subtitle displayed on page hero
               style: vertical
-              ordering@: 2
+              ordering@: 3
         options:
           type: tab
           fields:
