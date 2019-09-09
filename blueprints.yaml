@@ -100,30 +100,30 @@ form:
                   highlight: 0
                   validate:
                     type: int
-            blog:
+            list:
               type: section
-              title: Blog
+              title: List
               underline: true
               fields:
-                blog.topic.widget_width:
+                list.widget.width:
                   type: number
-                  label: Topic widget width
+                  label: Listing widget width
                   default: 240
                   placeholder: e.g. 240
                   append: 'px'
                   size: small
                   validate:
                     type: int
-                blog.topic.widget_height:
+                list.widget.height:
                   type: number
-                  label: Topic widget height
+                  label: Listing widget height
                   default: 320
                   placeholder: e.g. 320
                   append: 'px'
                   size: small
                   validate:
                     type: int
-                blog.topic.background_color:
+                list.widget.background_color:
                   type: colorpicker
                   default: '#fefefe'
                   label: Background
@@ -267,30 +267,30 @@ form:
                   type: colorpicker
                   label: Background
                   size: small
-            search:
-              type: section
-              title: Search
-              underline: true
-              fields:
-                sidebar.search.enabled:
-                  type: toggle
-                  label: Show widget
-                  highlight: 0
-                  default: 1
-                  options:
-                    1: PLUGIN_ADMIN.ENABLED
-                    0: PLUGIN_ADMIN.DISABLED
-                  validate:
-                    type: bool
-                sidebar.search.title:
-                  type: text
-                  label: Title
-                  help: Search widget title
-                  default: Search
-                  size: small
-                  validate:
-                    type: text
-                sidebar.search.background:
-                  type: colorpicker
-                  label: Background
-                  size: small
+            # search:
+            #   type: section
+            #   title: Search
+            #   underline: true
+            #   fields:
+            #     sidebar.search.enabled:
+            #       type: toggle
+            #       label: Show widget
+            #       highlight: 0
+            #       default: 1
+            #       options:
+            #         1: PLUGIN_ADMIN.ENABLED
+            #         0: PLUGIN_ADMIN.DISABLED
+            #       validate:
+            #         type: bool
+            #     sidebar.search.title:
+            #       type: text
+            #       label: Title
+            #       help: Search widget title
+            #       default: Search
+            #       size: small
+            #       validate:
+            #         type: text
+            #     sidebar.search.background:
+            #       type: colorpicker
+            #       label: Background
+            #       size: small

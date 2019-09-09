@@ -2,7 +2,7 @@
 # * Copyright 2017-2019 Andrii Burkatskyi aka underr
 # * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 
-title: blog
+title: list
 extends@:
   type: default
   context: blueprints://pages
@@ -57,7 +57,7 @@ form:
                   type: select
                   size: small
                   help: 'Leave the field empty if you do not want to filter collection'
-                  default: default #
+                  # default: default # or list
                   data-options@: '\Grav\Common\Page\Pages::pageTypes'
                   validate:
                     type: text
