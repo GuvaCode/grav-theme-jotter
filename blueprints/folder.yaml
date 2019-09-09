@@ -21,5 +21,7 @@ form:
               unset@: true
             header.hero.subtitle:
               unset@: true
+            media_order:
+              unset@: true
         options:
           unset@: true
