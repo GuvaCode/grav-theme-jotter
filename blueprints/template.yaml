@@ -22,10 +22,10 @@ form:
             header.media_order:
               unset@: true
         options:
+          unset@: true
           fields:
             publishing:
               fields:
                 header.published:
                   default: false
-          # unset@: true
 
