@@ -6,8 +6,8 @@
 
 {% block sidebar %}
 
-    {% set notepaper_width = theme_config.sidebar.widget_width ? theme_config.sidebar.widget_width ~ 'px' %}
-    {% set notepaper_height = theme_config.sidebar.widget_height ? theme_config.sidebar.widget_height ~ 'px' %}
+    {% set notepaper_width = theme_config.sidebar.widget.width ? theme_config.sidebar.widget.width ~ 'px' %}
+    {% set notepaper_height = theme_config.sidebar.widget.height ? theme_config.sidebar.widget.height ~ 'px' %}
 
     <div
         class="go-grid mb-4" id="sidebar">
@@ -58,8 +58,9 @@
             <div class="go-unit unit-auto mx-auto">
                 <div
                     class="j-notepaper bg-lite j-shadow-stack mx-auto"
-                    style="width: {{ notepaper_width }}; height: {{ notepaper_height }}; background: {{
-                        theme_config.sidebar.tags.background?: 'white' }};">
+                    style="width: {{ notepaper_width }};
+                        height: {{ notepaper_height }};
+                        background: {{ theme_config.sidebar.tags.background ?: 'white' }};">
                     <div class="notepaper-title">
                         {% if theme_config.sidebar.tags.title %}
                             <span class="border-bottom border-r-0">
@@ -89,7 +90,7 @@
     <script type="text/javascript">
         <!--
         // Add transform-skew for the sidebar elements;
-        var skew_enabled = '{{ theme_config.sidebar.skew }}'
+        var skew_enabled = '{{ theme_config.sidebar.widget.skew }}'
             ? true
             : false;
         var get_random = function ( list ) {
