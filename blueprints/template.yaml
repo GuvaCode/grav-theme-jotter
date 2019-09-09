@@ -25,9 +25,9 @@ form:
           unset@: true
           fields:
             publishing:
-              unset@: true
               fields:
                 header.published:
                   default: false
-                  unset@: true
+            publishing:
+              unset@: true
 
