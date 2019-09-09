@@ -27,13 +27,16 @@ form:
             publishing:
               type: section
               title: 'Published'
+              underline: true
+
               fields:
                 header.published:
                   type: toggle
                   togglable: true
                   label: PLUGIN_ADMIN.PUBLISHED
                   default: false
-                  option:
+                  size: medium
+                  options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
                   validate:
