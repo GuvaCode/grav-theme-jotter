@@ -23,13 +23,4 @@ form:
               unset@: true
         options:
           unset@: true
-          # fields:
-          #   publishing:
-          #     unset@: true
-          #   description:
-          #     unset@: true
-          #   taxonomies:
-          #     unset@: true
-          #   page-toc:
-          #     unset@: true
 
