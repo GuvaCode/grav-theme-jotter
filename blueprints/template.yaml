@@ -23,6 +23,8 @@ form:
               unset@: true
         options:
           unset@: true
+          type: tab
+          title: PLUGIN_ADMIN.OPTIONS
           fields:
             publishing:
               type: section
