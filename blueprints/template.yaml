@@ -15,8 +15,6 @@ form:
       fields:
         content:
           fields:
-            header.hero.title:
-              unset@: true
             header.hero.subtitle:
               unset@: true
         options:
