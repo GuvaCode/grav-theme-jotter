@@ -18,7 +18,7 @@
             {% block head %}
                 <title>
                     {% if page.title %}
-                        {{ page.title|e }} | {{ site.title|e }}
+                        {{ page.title|e }} | {% if page.header.hero.subtitle %}{{ page.header.hero.subtitle|e }}{% else %}{{ site.title|e }}{% endif %}
                     {% else %}
                         {{ site.title|e }}
                     {% endif %}
