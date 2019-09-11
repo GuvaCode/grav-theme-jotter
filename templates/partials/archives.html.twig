@@ -9,6 +9,7 @@
         <li>
             <span class="border-bottom border-r-0">
                 <a rel="nofollow" href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+                {# {{ month|date(config.plugins.archives.date_display_format) }} #}
                     <span class="archive_date t-dark">
                         &nbsp;
                         {{ month }}

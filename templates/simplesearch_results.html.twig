@@ -26,8 +26,8 @@
                 {% if query %}
                     {% if search_results.count %}
                         {{ search_results.count == 1
-                            ? "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query)|raw
-                            : "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query, count)|raw 
+                            ? "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw
+                            : "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, search_results.count)|raw
                         }}
                     {% endif %}
                 {% endif %}
