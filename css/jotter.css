@@ -233,7 +233,7 @@ html {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.sidebar {
+/* .sidebar {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
@@ -242,6 +242,12 @@ html {
 
 .sidebar > * {
     margin: 1rem;
+} */
+
+#sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .sticker {
