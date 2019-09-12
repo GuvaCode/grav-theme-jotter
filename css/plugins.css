@@ -1,28 +1,30 @@
 /*!
-* Jotter is a Grav CMS theme | https://github.com/underr-ua/grav-theme-jotter
+* Links is a Grav CMS theme | https://github.com/underr-ua/grav-theme-links
 * Copyright 2017-2019 Andrii Burkatskyi aka underr
-* Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
+* Licensed under MIT | https://github.com/underr-ua/grav-theme-links/raw/master/LICENSE
 */
 
 /* Plugin styles */
 
 .search-wrapper-nav .search-input {
-    display: none;
-    margin-left: .25rem;
-    padding-left: .25rem !important;
+    display: none; /* remove it for transition */
+    width: 0px;
     background-color: #fcfcfc !important;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
 .search-wrapper-nav:hover .search-input,
 .search-wrapper-nav .search-input:focus {
     display: block;
+    margin-left: .25rem;
+    padding-left: .25rem !important;
     width: 100%;
     visibility: visible;
     opacity: 1;
-    transition-delay: 0s;
+    /* transition: width 0.3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width 0.3s; */
 }
 
 .search-wrapper {
