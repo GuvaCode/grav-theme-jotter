@@ -1331,7 +1331,7 @@ mark {
 
 pre {
     background: #eff0f1;
-    margin: 5px 0;
+    margin: 10px 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
     border-radius: 3px;
@@ -1345,9 +1345,13 @@ pre .code {
     color: #00437f;
 }
 
-pre.pre-scrollable {
+pre.scrollable {
+    height: auto;
     max-height: 12rem;
-    overflow-y: scroll;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap;
+    overflow-y: auto;
 }
 
 .t-hide {
