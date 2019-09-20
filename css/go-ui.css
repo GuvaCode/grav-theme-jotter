@@ -1331,16 +1331,17 @@ mark {
 
 pre {
     background: #e5e5e5;
-    margin: 1rem 0;
+    margin: 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
+    border-radius: 3px;
 }
 
 pre code,
 pre .code {
     display: inline;
     word-break: normal;
-    padding: 0.1rem 0.2rem;
+    padding: 0;
     color: #00437f;
 }
 
