@@ -1331,7 +1331,7 @@ mark {
 
 pre {
     background: #eff0f1;
-    margin: 0;
+    margin: 5px 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
     border-radius: 3px;
