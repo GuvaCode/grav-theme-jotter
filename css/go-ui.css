@@ -1331,7 +1331,7 @@ mark {
 
 pre {
     background: #e5e5e5;
-    margin: 1rem 0;
+    margin: 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
 }
@@ -1340,7 +1340,7 @@ pre code,
 pre .code {
     display: inline;
     word-break: normal;
-    padding: 0.1rem 0.2rem;
+    padding-right: 0.2rem;
     color: #00437f;
 }
 
