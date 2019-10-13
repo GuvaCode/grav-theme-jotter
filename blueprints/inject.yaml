@@ -2,7 +2,7 @@
 # * Copyright 2017-2019 Andrii Burkatskyi aka underr
 # * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 
-title: template
+title: inject
 '@extends':
     type: default
     context: blueprints://pages
