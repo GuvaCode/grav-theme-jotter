@@ -7,7 +7,7 @@
 :root {
     --c-m-0: #5f666d;
     --c-m-1: #e5e5e5;
-    --c-m-2: #f1f2f3;
+    --c-m-2: #eff0f1;
     --c-r-0: #dc3545;
     --c-r-1: #ffcccc;
     --c-r-2: #fdf7f7;
@@ -1290,8 +1290,8 @@ blockquote p {
 
 code,
 .code {
-    color: #dc3545;
-    background-color: #e5e5e5;
+    color: #00437f;
+    background-color: #eff0f1;
     border-radius: 3px;
     padding: 0.1rem 0.2rem;
     vertical-align: bottom;
@@ -1330,8 +1330,8 @@ mark {
 }
 
 pre {
-    background: #e5e5e5;
-    margin: 0;
+    background: #eff0f1;
+    margin: 10px 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
     border-radius: 3px;
@@ -1345,9 +1345,13 @@ pre .code {
     color: #00437f;
 }
 
-pre.pre-scrollable {
+pre.scrollable {
+    height: auto;
     max-height: 12rem;
-    overflow-y: scroll;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap;
+    overflow-y: auto;
 }
 
 .t-hide {
@@ -1541,7 +1545,7 @@ ul ol {
 
 .go-button {
     border: 1px solid #e5e5e5;
-    background-color: #f1f2f3;
+    background-color: #eff0f1;
     color: #2d3238;
     cursor: pointer;
     display: inline-block;
@@ -1959,7 +1963,7 @@ ul ol {
 }
 
 .border-m-2 {
-    border-color: #f1f2f3;
+    border-color: #eff0f1;
 }
 
 .border-r-0 {
@@ -2032,7 +2036,7 @@ ul ol {
 }
 
 .bg-m-2 {
-    background-color: #f1f2f3;
+    background-color: #eff0f1;
 }
 
 .bg-r-0 {
@@ -2104,7 +2108,7 @@ ul ol {
 }
 
 .t-m-2 {
-    color: #f1f2f3 !important;
+    color: #eff0f1 !important;
 }
 
 .t-r-0 {
