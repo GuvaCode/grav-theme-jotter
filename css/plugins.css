@@ -149,12 +149,21 @@ ul.archives li > a {
 /* grav-image-captions-alt */
 img.caption {
     max-width: 100%;
+    padding: 8px;
+}
+
+figcaption.image-caption {
+    color: lightcoral;
+    font-style: italic;
+    margin: -8!important;
+    background: lavender;
+    border-left: thin solid lavender;
+    border-right: thin solid lavender;
+    border-bottom: thin solid lavender;
 }
 
 figure.image-caption {
     margin: 0!important;
-    padding: 8px;
-
 }
 
 figure.figure-width-1 {
