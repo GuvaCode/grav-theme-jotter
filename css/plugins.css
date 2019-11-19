@@ -152,6 +152,7 @@ img.caption {
 }
 
 figure.image-caption {
+    border: thin solid lightgrey;
     margin: 0!important;
 }
 
