@@ -149,10 +149,11 @@ ul.archives li > a {
 /* grav-image-captions-alt */
 img.caption {
     max-width: 100%;
+    padding: 4px;
 }
 
 figure.image-caption {
-    box-shadow:inset 0px 0px 0px 2px lightgray;
+    box-shadow:inset 0px 0px 0px 1px lightgray;
     margin: 0!important;
 }
 
