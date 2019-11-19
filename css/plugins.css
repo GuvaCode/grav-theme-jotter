@@ -148,171 +148,171 @@ ul.archives li > a {
 
 /* grav-image-captions-alt */
 
-.figure.image-caption {
-    margin: 0;
+figure.image-caption {
+    margin: 0!important;
 }
 
-.figure.figure-width-1 {
+figure.figure-width-1 {
     width: 8.33333%;
 }
 
-.figure.figure-width-2 {
+figure.figure-width-2 {
     width: 16.66667%;
 }
 
-.figure.figure-width-3 {
+figure.figure-width-3 {
     width: 25%;
 }
 
-.figure.figure-width-4 {
+figure.figure-width-4 {
     width: 33.33333%;
 }
 
-.figure.figure-width-5 {
+figure.figure-width-5 {
     width: 41.66667%;
 }
 
-.figure.figure-width-6 {
+figure.figure-width-6 {
     width: 50%;
 }
 
-.figure.figure-width-7 {
+figure.figure-width-7 {
     width: 58.33333%;
 }
 
-.figure.figure-width-8 {
+figure.figure-width-8 {
     width: 66.66667%;
 }
 
-.figure.figure-width-9 {
+figure.figure-width-9 {
     width: 75%;
 }
 
-.figure.figure-width-10 {
+figure.figure-width-10 {
     width: 83.33333%;
 }
 
-.figure.figure-width-11 {
+figure.figure-width-11 {
     width: 91.66667%;
 }
 
-.figure.figure-width-12 {
+figure.figure-width-12 {
     width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
-    .figure.figure-width-1-lg {
+    figure.figure-width-1-lg {
         width: 8.33333%;
     }
-    .figure.figure-width-2-lg {
+    figure.figure-width-2-lg {
         width: 16.66667%;
     }
-    .figure.figure-width-3-lg {
+    figure.figure-width-3-lg {
         width: 25%;
     }
-    .figure.figure-width-4-lg {
+    figure.figure-width-4-lg {
         width: 33.33333%;
     }
-    .figure.figure-width-5-lg {
+    figure.figure-width-5-lg {
         width: 41.66667%;
     }
-    .figure.figure-width-6-lg {
+    figure.figure-width-6-lg {
         width: 50%;
     }
-    .figure.figure-width-7-lg {
+    figure.figure-width-7-lg {
         width: 58.33333%;
     }
-    .figure.figure-width-8-lg {
+    figure.figure-width-8-lg {
         width: 66.66667%;
     }
-    .figure.figure-width-9-lg {
+    figure.figure-width-9-lg {
         width: 75%;
     }
-    .figure.figure-width-10-lg {
+    figure.figure-width-10-lg {
         width: 83.33333%;
     }
-    .figure.figure-width-11-lg {
+    figure.figure-width-11-lg {
         width: 91.66667%;
     }
-    .figure.figure-width-12-lg {
+    figure.figure-width-12-lg {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    .figure.figure-width-1-md {
+    figure.figure-width-1-md {
         width: 8.33333%;
     }
-    .figure.figure-width-2-md {
+    figure.figure-width-2-md {
         width: 16.66667%;
     }
-    .figure.figure-width-3-md {
+    figure.figure-width-3-md {
         width: 25%;
     }
-    .figure.figure-width-4-md {
+    figure.figure-width-4-md {
         width: 33.33333%;
     }
-    .figure.figure-width-5-md {
+    figure.figure-width-5-md {
         width: 41.66667%;
     }
-    .figure.figure-width-6-md {
+    figure.figure-width-6-md {
         width: 50%;
     }
-    .figure.figure-width-7-md {
+    figure.figure-width-7-md {
         width: 58.33333%;
     }
-    .figure.figure-width-8-md {
+    figure.figure-width-8-md {
         width: 66.66667%;
     }
-    .figure.figure-width-9-md {
+    figure.figure-width-9-md {
         width: 75%;
     }
-    .figure.figure-width-10-md {
+    figure.figure-width-10-md {
         width: 83.33333%;
     }
-    .figure.figure-width-11-md {
+    figure.figure-width-11-md {
         width: 91.66667%;
     }
-    .figure.figure-width-12-md {
+    figure.figure-width-12-md {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .figure.figure-width-1-sm {
+    figure.figure-width-1-sm {
         width: 8.33333%;
     }
-    .figure.figure-width-2-sm {
+    figure.figure-width-2-sm {
         width: 16.66667%;
     }
-    .figure.figure-width-3-sm {
+    figure.figure-width-3-sm {
         width: 25%;
     }
-    .figure.figure-width-4-sm {
+    figure.figure-width-4-sm {
         width: 33.33333%;
     }
-    .figure.figure-width-5-sm {
+    figure.figure-width-5-sm {
         width: 41.66667%;
     }
-    .figure.figure-width-6-sm {
+    figure.figure-width-6-sm {
         width: 50%;
     }
-    .figure.figure-width-7-sm {
+    figure.figure-width-7-sm {
         width: 58.33333%;
     }
-    .figure.figure-width-8-sm {
+    figure.figure-width-8-sm {
         width: 66.66667%;
     }
-    .figure.figure-width-9-sm {
+    figure.figure-width-9-sm {
         width: 75%;
     }
-    .figure.figure-width-10-sm {
+    figure.figure-width-10-sm {
         width: 83.33333%;
     }
-    .figure.figure-width-11-sm {
+    figure.figure-width-11-sm {
         width: 91.66667%;
     }
-    .figure.figure-width-12-sm {
+    figure.figure-width-12-sm {
         width: 100%;
     }
 }
