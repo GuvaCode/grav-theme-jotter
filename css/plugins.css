@@ -147,13 +147,14 @@ ul.archives li > a {
 }
 
 /* grav-image-captions-alt */
-img.figure-image {
+img.caption {
     max-width: 100%;
 }
 
-figure.figure-image {
+figure.image-caption {
     margin: 0!important;
     padding: 8px;
+
 }
 
 figure.figure-width-1 {
