@@ -149,7 +149,11 @@ ul.archives li > a {
 /* grav-image-captions-alt */
 img.caption {
     max-width: 100%;
-    padding: 8px;
+    padding: 4px;
+}
+
+figure.image-caption img {
+    padding: 0;
 }
 
 figcaption.image-caption {
@@ -162,8 +166,10 @@ figcaption.image-caption {
     border-bottom: thin solid lavender;
 }
 
+
 figure.image-caption {
     margin: 0!important;
+    padding: 4px;
 }
 
 figure.figure-width-1 {
