@@ -152,7 +152,7 @@ img.caption {
 }
 
 figure.image-caption {
-    border: thin solid lightgrey;
+    box-shadow:inset 0px 0px 0px 2px lightgray;
     margin: 0!important;
 }
 
