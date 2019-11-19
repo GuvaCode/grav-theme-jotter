@@ -148,6 +148,10 @@ ul.archives li > a {
 
 /* grav-image-captions-alt */
 
+.figure.image-caption {
+    margin: 0;
+}
+
 .figure.figure-width-1 {
     width: 8.33333%;
 }
