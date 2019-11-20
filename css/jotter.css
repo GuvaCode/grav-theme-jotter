@@ -271,3 +271,12 @@ html {
     border-style: solid;
     border-color: var(--c-m-1) var(--c-m-1) transparent transparent;
 }
+
+
+img.media-border,
+video.media-border {
+    background: #fff;
+    border: 1px solid #bcc4cc;
+    box-sizing: border-box;
+    padding: 4px;
+}
