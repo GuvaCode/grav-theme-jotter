@@ -65,7 +65,7 @@
 
 .recaptcha-form-group .control-label {
     display: block !important;
-    max: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     font-size: 1.2rem;
     font-weight: 800;
@@ -73,7 +73,7 @@
 
 .form-control {
     display: block !important;
-    max: 100% !important;
+    max-width: 100% !important;
     width: 100% !important;
     margin: 0.5rem 0 !important;
 }
@@ -118,7 +118,7 @@ ul.archives li > a {
 /* Markdown notices */
 
 .notices {
-    border-left: 4px !important;
+    border-left-width: 4px !important;
 }
 
 .notices p {
@@ -226,7 +226,7 @@ figure.figure-12 {
     width: 100%;
 }
 
-@media only screen and (max: 1280px) {
+@media only screen and (max-width: 1280px) {
     figure.figure-1-lg {
         width: 8.33333%;
     }
@@ -265,7 +265,7 @@ figure.figure-12 {
     }
 }
 
-@media only screen and (max: 1024px) {
+@media only screen and (max-width: 1024px) {
     figure.figure-1-md {
         width: 8.33333%;
     }
@@ -304,7 +304,7 @@ figure.figure-12 {
     }
 }
 
-@media only screen and (max: 768px) {
+@media only screen and (max-width: 768px) {
     figure.figure-1-sm {
         width: 8.33333%;
     }
