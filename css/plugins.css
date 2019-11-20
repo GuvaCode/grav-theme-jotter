@@ -147,6 +147,12 @@ ul.archives li > a {
 }
 
 /* grav-image-captions-alt */
+img.caption {
+    max-width: 100%;
+    padding: 4px;
+}
+
+
 
 figure.image-caption {
     display: inline-block;
@@ -158,9 +164,7 @@ figure.d-block {
     display: block;
 }
 
-figure.image-* img {
-    max-width: 100%;
-}
+
 
 figure.image-1 {
     width: 8.33333%;
@@ -325,4 +329,8 @@ figure.image-12 {
     figure.image-12-sm {
         width: 100%;
     }
+}
+
+figure.image-* img {
+    max-width: 100%;
 }
