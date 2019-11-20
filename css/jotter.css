@@ -53,7 +53,7 @@ html {
     background-origin: content-box;
 }
 
-.body-content > container {
+.body-content > .container {
     border-left: 2px solid #ffcccc;
 }
 
@@ -76,13 +76,13 @@ html {
 }
 
 @media only screen and (max-width: 768px) {
-    container {
+    .container {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
 }
 
-article:after {
+.article:after {
     color: var(--c-m-0);
     content: '~~~';
     display: inline-block;
@@ -91,62 +91,62 @@ article:after {
     text-align: center;
 }
 
-article .article-content a {
+.article .article-content a {
     text-decoration: none !important;
     color: var(--c-b-0);
 }
 
-article .article-lead {
+.article .article-lead {
     color: var(--c-m-1);
 }
 
-card {
+.card {
     background-color: #fffff4;
     margin: 10px;
 }
 
 
 
-card .card-image {
+.card .card-image {
     height: 12rem;
 }
 
 /* Nav dark theme */
 
-nav {
+.nav {
     background-color: var(--c-dark);
     border-bottom: 2px solid var(--c-r-0);
     color: #fffff4;
 }
 
-nav a {
+.nav a {
     color: #fffff4;
 }
 
-nav.nav-open .nav-list {
+.nav.nav-open .nav-list {
     border-top: 2px solid var(--c-r-0);
     text-align: center;
 }
 
-nav .nav-item {
+.nav .nav-item {
     color: #fffff4;
 }
 
-nav .nav-item:hover {
+.nav .nav-item:hover {
     background-color: var(--c-lite);
     color: var(--c-dark);
 }
 
-nav .nav-item.active {
+.nav .nav-item.active {
     color: var(--c-r-0);
 }
 
-nav .nav-toggle {
+.nav .nav-toggle {
     text-align: center;
     color: #fffff4;
 }
 
-tag a {
+.tag a {
     color: var(--c-dark);
 }
 
