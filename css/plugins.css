@@ -155,6 +155,10 @@ figure.image-caption {
     margin: 0!important;
 }
 
-figure.image-* img {
+figure img.u {
     max-width: 100%;
+}
+
+figure.image-caption {
+    display: inline-block;
 }

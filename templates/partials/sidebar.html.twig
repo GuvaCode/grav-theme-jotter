@@ -10,10 +10,10 @@
     {% set notepaper_height = theme_config.sidebar.widget.height ? theme_config.sidebar.widget.height ~ 'px' %}
 
     <div
-        class="go-grid mb-4" id="sidebar">
+        class="g mb-4" id="sidebar">
         {#
                 {% if theme_config.sidebar.search.enabled %}
-                    <div class="go-unit unit-auto mx-auto">
+                    <div class="u u-auto mx-auto">
                         <div
                             class="j-notepaper bg-lite j-shadow-stack mx-auto"
                             style="width: {{ notepaper_width }};height: {{ notepaper_height }}; background: {{
@@ -33,7 +33,7 @@
                 {% endif %}
          #}
         {% if theme_config.sidebar.archive.enabled %}
-            <div class="go-unit unit-auto mx-auto">
+            <div class="u u-auto mx-auto">
                 <div
                     class="j-notepaper bg-lite j-shadow-stack mx-auto"
                     style="width: {{ notepaper_width }}; height: {{ notepaper_height }}; background: {{
@@ -55,7 +55,7 @@
         {% endif %}
 
         {% if config.plugins.taxonomylist.enabled and theme_config.sidebar.tags.enabled %}
-            <div class="go-unit unit-auto mx-auto">
+            <div class="u u-auto mx-auto">
                 <div
                     class="j-notepaper bg-lite j-shadow-stack mx-auto"
                     style="width: {{ notepaper_width }};

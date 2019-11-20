@@ -9,14 +9,14 @@
         <li>
             <span class="border-bottom border-r-0">
                 <a rel="nofollow" href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
-                    <span class="archive_date t-dark">
+                    <span class="archive_date text-dark">
                         &nbsp;
                         {{ month }}
                     </span>
                 </a>
                 {% if archives_show_count %}
                     &nbsp;(
-                    <span class="t-r-0">
+                    <span class="text-r-0">
                         {{ items|length }}
                     </span>
                     )
