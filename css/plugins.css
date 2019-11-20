@@ -148,13 +148,13 @@ ul.archives li > a {
 
 /* grav-image-captions-alt */
 img.caption {
-    max: 100%;
+    max-width: 100%;
     padding: 4px;
 }
 
 figure.image-caption img {
     padding: 0;
-    max: 100%;
+    max-width: 100%;
 }
 
 figcaption.image-caption {
