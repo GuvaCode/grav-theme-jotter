@@ -4,7 +4,7 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-<article class="go-article" itemscope="itemscope" itemtype="https://schema.org/Article">
+<article class="article" itemscope="itemscope" itemtype="https://schema.org/Article">
     {% set banner = page.media[page.template() ~ '.jpg']|default(page.media[page.template() ~ '.jpeg'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
 
     <header class="article-title"}}">
@@ -30,7 +30,7 @@
     </div>
 
     {% if config.get('plugins.page-toc.active') or attribute(page.header, 'page-toc').active %}
-        <div class="article-toc page-toc go-accordion">
+        <div class="article-toc page-toc accordion">
             {% set table_of_contents = toc(page.content) %}
 
             {% if table_of_contents is not empty %}

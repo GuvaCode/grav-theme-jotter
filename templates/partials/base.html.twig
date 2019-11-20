@@ -59,7 +59,7 @@
             {% endblock head %}
         </head>
 
-        <body class="{{ page.header.body_classes }} go-body">
+        <body class="{{ page.header.body_classes }} body">
 
             {% block header %}
                 {% include 'partials/header.html.twig' %}
@@ -67,7 +67,7 @@
 
             {% block body %}
                 <div class="body-content" style="{% if color %}color:{{ color }};{% endif %}{% if bg %}background-color:{{ bg }};{% endif %}">
-                    <div class="go-container" style="max-width:{{ max_width }};">
+                    <div class="container" style="max-width:{{ max_width }};">
                         {% block content %}
                         {% endblock %}
                     </div>

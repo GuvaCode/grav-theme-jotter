@@ -8,7 +8,7 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-    <nav class="go-breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <nav class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
         {% set i = 0 %}
 
         {% for crumb in crumbs %}

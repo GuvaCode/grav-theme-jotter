@@ -13,15 +13,15 @@
 
 <header class="{{ classes }} body-header">
     {% include 'partials/navigation.html.twig' %}
-    <div class="go-hero bg-image" style="{% if banner %}background-image:url('{{ banner.quality(64).url }}');{% endif %} {% if height %}height:{{ height }};{% endif %} {% if color %}color:{{ color }};{% endif %} {% if bg %}background-color:{{ bg }};{% endif %}">
-        <h1 class="hero-title j-t-shadow">
+    <div class="hero bg-image" style="{% if banner %}background-image:url('{{ banner.quality(64).url }}');{% endif %} {% if height %}height:{{ height }};{% endif %} {% if color %}color:{{ color }};{% endif %} {% if bg %}background-color:{{ bg }};{% endif %}">
+        <h1 class="hero-title j-text-shadow">
             {% if page.home %}
                 {{ site.title|default(page.title)|e }}
             {% else %}
                 {{ page.header.hero.title|default(page.title)|e }}
             {% endif %}
             {% if page.header.hero.subtitle %}
-                <span class="hero-subtitle t-nm t-italic">
+                <span class="hero-subtitle text-nm text-italic">
                     -
                     {{ page.header.hero.subtitle|e|lower }}
                     -
@@ -75,7 +75,7 @@
                 <a href="https://getfirefox.com" rel="nofollow">Firefox</a> or\
                 <a href="https://www.opera.com/download" rel="nofollow">Opera</a>.\
             </span>\
-            <span id="attention_close" class="t-right">&nbsp;&nbsp;<b>x</b>&nbsp;&nbsp;</span>';
+            <span id="attention_close" class="text-right">&nbsp;&nbsp;<b>x</b>&nbsp;&nbsp;</span>';
 
         el.insertAdjacentHTML('afterbegin', text);
         document

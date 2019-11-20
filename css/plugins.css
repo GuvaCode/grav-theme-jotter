@@ -145,3 +145,17 @@ ul.archives li > a {
     list-style-type: none !important;
     padding-left: 0 !important;
 }
+
+/* grav-image-captions-alt */
+figure.image-caption {
+    display: inline-block!important;
+    margin: 4px!important;
+}
+
+figure img.caption {
+    max-width: 100%;
+}
+
+img.img-responsive.img-bordered {
+    margin: 4px;
+}

@@ -12,11 +12,11 @@
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 
-    <div class="go-grid">
-        <div class="{{ theme_config.sidebar.enabled ? 'go-unit unit-8 unit-12-md' : 'go-unit unit-auto mx-auto' }}" data-t="{{page.content.filter}}">
+    <div class="g">
+        <div class="{{ theme_config.sidebar.enabled ? 'u u-8 u-12-md' : 'u u-auto mx-auto' }}" data-t="{{page.content.filter}}">
 
             {% if page.header.content.filter.type == 'list' %}
-                <div class="go-grid">
+                <div class="g">
 
                     {% for p in page.collection %}
                         {% set banner = p.media[p.template() ~ '.jpg']|default(p.media[p.template() ~ '.jpeg'])|default(p.media[p.template() ~ '.png'])|default(p.media.images|first) %}
@@ -40,7 +40,7 @@
             {% endif %}
         </div>
         {% if theme_config.sidebar.enabled %}
-            <div class="go-unit unit-4 unit-12-md">
+            <div class="u u-4 u-12-md">
                 {% include 'partials/sidebar.html.twig' %}
             </div>
         {% endif %}

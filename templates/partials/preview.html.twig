@@ -4,7 +4,7 @@
 * Licensed under MIT | https://github.com/underr-ua/grav-theme-jotter/raw/master/LICENSE
 #}
 
-<section class="go-card j-shadow bg-paper-photo mx-0" itemscope="itemscope" itemtype="https://schema.org/Article">
+<section class="card j-shadow bg-paper-photo mx-0" itemscope="itemscope" itemtype="https://schema.org/Article">
     {% set banner = page.media[page.template() ~ '.jpg']|default(page.media[page.template() ~ '.jpeg'])|default(page.media[page.template() ~ '.png'])|default(page.media.images|first) %}
     {% if banner %}
         <a class="card-image bg-image" href="{{ page.url }}" style="background-image:url('{{ banner.quality(32).url }}')"></a>
@@ -21,15 +21,15 @@
     </header>
 
     <div class="card-meta align-left">
-        <div class="go-grid">
-            <div class="go-unit unit-auto unit-12-sm">
+        <div class="g">
+            <div class="u u-auto u-12-sm">
                 <i class="i-calendar font-sm"></i>
                 {% include 'partials/date.html.twig' with { 'date': page.header.date|date('Y-m-d') } %}
                 <span class="hide-sm">
                     |
                 </span>
             </div>
-            <div class="go-unit unit-auto unit-12-sm">
+            <div class="u u-auto u-12-sm">
                 <i class="i-folder font-sm"></i>
                 <a href="{{ page.parent.url }}">
                     {{ page.parent.title }}
@@ -38,7 +38,7 @@
                     |
                 </span>
             </div>
-            <div class="go-unit unit-auto unit-12-sm">
+            <div class="u u-auto u-12-sm">
                 {% include 'partials/tag_buttons.html.twig' with {'page': page, 'base_url': base_url} %}
             </div>
         </div>
