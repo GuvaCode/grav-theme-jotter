@@ -178,167 +178,171 @@ figure.d-block {
     display: block;
 }
 
-figure.figure-1 {
+figure.image-* img {
+    max-width: 100%;
+}
+
+figure.image-1 {
     width: 8.33333%;
 }
 
-figure.figure-2 {
+figure.image-2 {
     width: 16.66667%;
 }
 
-figure.figure-3 {
+figure.image-3 {
     width: 25%;
 }
 
-figure.figure-4 {
+figure.image-4 {
     width: 33.33333%;
 }
 
-figure.figure-5 {
+figure.image-5 {
     width: 41.66667%;
 }
 
-figure.figure-6 {
+figure.image-6 {
     width: 50%;
 }
 
-figure.figure-7 {
+figure.image-7 {
     width: 58.33333%;
 }
 
-figure.figure-8 {
+figure.image-8 {
     width: 66.66667%;
 }
 
-figure.figure-9 {
+figure.image-9 {
     width: 75%;
 }
 
-figure.figure-10 {
+figure.image-10 {
     width: 83.33333%;
 }
 
-figure.figure-11 {
+figure.image-11 {
     width: 91.66667%;
 }
 
-figure.figure-12 {
+figure.image-12 {
     width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
-    figure.figure-1-lg {
+    figure.image-1-lg {
         width: 8.33333%;
     }
-    figure.figure-2-lg {
+    figure.image-2-lg {
         width: 16.66667%;
     }
-    figure.figure-3-lg {
+    figure.image-3-lg {
         width: 25%;
     }
-    figure.figure-4-lg {
+    figure.image-4-lg {
         width: 33.33333%;
     }
-    figure.figure-5-lg {
+    figure.image-5-lg {
         width: 41.66667%;
     }
-    figure.figure-6-lg {
+    figure.image-6-lg {
         width: 50%;
     }
-    figure.figure-7-lg {
+    figure.image-7-lg {
         width: 58.33333%;
     }
-    figure.figure-8-lg {
+    figure.image-8-lg {
         width: 66.66667%;
     }
-    figure.figure-9-lg {
+    figure.image-9-lg {
         width: 75%;
     }
-    figure.figure-10-lg {
+    figure.image-10-lg {
         width: 83.33333%;
     }
-    figure.figure-11-lg {
+    figure.image-11-lg {
         width: 91.66667%;
     }
-    figure.figure-12-lg {
+    figure.image-12-lg {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    figure.figure-1-md {
+    figure.image-1-md {
         width: 8.33333%;
     }
-    figure.figure-2-md {
+    figure.image-2-md {
         width: 16.66667%;
     }
-    figure.figure-3-md {
+    figure.image-3-md {
         width: 25%;
     }
-    figure.figure-4-md {
+    figure.image-4-md {
         width: 33.33333%;
     }
-    figure.figure-5-md {
+    figure.image-5-md {
         width: 41.66667%;
     }
-    figure.figure-6-md {
+    figure.image-6-md {
         width: 50%;
     }
-    figure.figure-7-md {
+    figure.image-7-md {
         width: 58.33333%;
     }
-    figure.figure-8-md {
+    figure.image-8-md {
         width: 66.66667%;
     }
-    figure.figure-9-md {
+    figure.image-9-md {
         width: 75%;
     }
-    figure.figure-10-md {
+    figure.image-10-md {
         width: 83.33333%;
     }
-    figure.figure-11-md {
+    figure.image-11-md {
         width: 91.66667%;
     }
-    figure.figure-12-md {
+    figure.image-12-md {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    figure.figure-1-sm {
+    figure.image-1-sm {
         width: 8.33333%;
     }
-    figure.figure-2-sm {
+    figure.image-2-sm {
         width: 16.66667%;
     }
-    figure.figure-3-sm {
+    figure.image-3-sm {
         width: 25%;
     }
-    figure.figure-4-sm {
+    figure.image-4-sm {
         width: 33.33333%;
     }
-    figure.figure-5-sm {
+    figure.image-5-sm {
         width: 41.66667%;
     }
-    figure.figure-6-sm {
+    figure.image-6-sm {
         width: 50%;
     }
-    figure.figure-7-sm {
+    figure.image-7-sm {
         width: 58.33333%;
     }
-    figure.figure-8-sm {
+    figure.image-8-sm {
         width: 66.66667%;
     }
-    figure.figure-9-sm {
+    figure.image-9-sm {
         width: 75%;
     }
-    figure.figure-10-sm {
+    figure.image-10-sm {
         width: 83.33333%;
     }
-    figure.figure-11-sm {
+    figure.image-11-sm {
         width: 91.66667%;
     }
-    figure.figure-12-sm {
+    figure.image-12-sm {
         width: 100%;
     }
 }
