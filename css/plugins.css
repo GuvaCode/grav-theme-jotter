@@ -147,7 +147,7 @@ ul.archives li > a {
 }
 
 /* grav-image-captions-alt */
-img.caption {
+figure img.caption {
     max-width: 100%;
 }
 

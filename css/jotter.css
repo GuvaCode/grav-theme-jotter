@@ -272,11 +272,10 @@ html {
     border-color: var(--c-m-1) var(--c-m-1) transparent transparent;
 }
 
-
-img.media-border,
-video.media-border {
+img.bordered,
+video.bordered {
     background: #fff;
-    border: 1px solid #bcc4cc;
+    border: thin solid #bcc4cc;
     box-sizing: border-box;
     padding: 4px;
 }
