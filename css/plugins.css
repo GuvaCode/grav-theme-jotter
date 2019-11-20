@@ -155,3 +155,7 @@ figure.image-caption {
 figure img.caption {
     max-width: 100%;
 }
+
+img.img-responsive.img-bordered {
+    margin: 4px;
+}
