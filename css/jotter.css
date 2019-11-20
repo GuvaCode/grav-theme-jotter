@@ -276,13 +276,6 @@ video.img-bordered {
     padding: 4px;
 }
 
-figure img.img-bordered,
-figure video.img-bordered {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
 figure.image-caption img.caption {
     width: 100% !important;
 }
